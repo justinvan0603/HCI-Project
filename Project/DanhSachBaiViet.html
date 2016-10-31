@@ -1,0 +1,651 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <title>Trang chủ</title>
+</head>
+
+<style>
+    footer a{
+        color: white;
+    }
+    .list-group-horizontal .list-group-item {
+        display: inline-block;
+    }
+    
+    .list-group-horizontal .list-group-item {
+        margin-bottom: 0;
+        margin-left: -4px;
+        margin-right: 0;
+    }
+    
+    .list-group-horizontal .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+    }
+    
+    .list-group-horizontal .list-group-item:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+    }
+    
+    #top-link-block {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .list-group-item a {
+        color: black;
+        font-weight: bold;
+    }
+    
+    .navnews a {
+        color: #009900;
+        font-weight: bold;
+    }
+    
+    .active {
+        color: red;
+        font-weight: bold;
+    }
+    
+    .tableheader {
+        color: white;
+    }
+    
+    .tableheader:hover {
+        color: #cc0000;
+    }
+    
+    .higtlightnews {
+        color: black;
+    }
+    
+    .scheduler a {
+        color: black;
+    }
+    
+    .list-group li {
+        font-size: 12px;
+    }
+    
+    .winteam {
+        color: red;
+    }
+    
+    .loseteam {
+        color: #666666;
+    }
+    
+    .scoreboard tbody tr {
+        font-size: 12, 5px;
+    }
+    
+    .item p {
+        color: black;
+        font-size: bolder;
+    }
+    
+    .tblhotnews table a {
+        color: black;
+        font-size: 12px;
+    }
+    
+    .tblhotnews table a:hover {
+        color: #cc0000;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    a:hover {
+        color: #cc0000;
+    }
+    
+    .caption {
+        display: block;
+        width: 100%;
+        background: #009900;
+        height: 55px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 55px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        box-sizing: border-box;
+    }
+    
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    .row.content {
+        height: 450px
+    }
+    
+    .sidenav {
+        padding-top: 20px;
+        background-color: white;
+        height: 100%;
+    }
+    
+    footer {
+        background-color: #333333;
+        color: white;
+        padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {
+            height: auto;
+        }
+    }
+    
+    #headerBar a {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+        width: 70%;
+        margin: auto;
+        max-width: 70% !important;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        min-height: 200px;
+    }
+    
+    .navbardropdown {
+        background-color: #00cc00;
+    }
+    
+    .navbardropdown li a {
+        color: black !important;
+    }
+</style>
+
+<body>
+    <object style="margin-left:10px;" width="1320" height="89">
+
+<param name="movie" value="animation.swf">
+
+<embed src="animation.swf" width="1320" height="89">
+
+</embed>
+
+</object>
+    <div class="container-fluid">
+        <a href="Index.html">
+            <img src="images/bao-bong-da.png" />
+        </a>
+        <nav id="headerBar" class="navbar " style="  background-color:#009900;">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">VIỆT NAM
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">V-LEAGUE</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">FUTSAL</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">GIẢI HẠNG NHẤT</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ĐỘI TUYỂN NỮ</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ANH
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">GIẢI NGOẠI HẠNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP LIÊN ĐOÀN</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP FA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CHAMPIONS LEAGUE
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">LỊCH THI ĐẤU-KẾT QUẢ</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">TIN TỨC</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">TÂY BAN NHA
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">LA LIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP NHÀ VUA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ý
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">SERIE A</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ĐỨC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">BUNDESLIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+                        
+                        <li><a href="#">VIDEO</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">CHUYỂN NHƯỢNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ĐỘI BÓNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CẦU THỦ</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+
+            <ul class="nav navbar-nav navbar-right">
+                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            </ul>
+
+
+        </div>
+        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-md-2 sidenav nopadding">
+
+
+
+
+                    <object width="160" height="600">
+
+<param name="movie" value="animation-side.swf">
+
+<embed src="animationside.swf" width="160" height="600">
+
+</embed>
+
+</object>
+
+                </div>
+
+                <div class="col-md-7 text-left">
+
+
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="container-fluid">
+
+                                <h3 class="text-left"><img src="images/england-ball.png" /> BÓNG ĐÁ ANH</h3>
+
+                            </div>
+                            <div class="container-fluid">
+                                <ul class="list-group list-group-horizontal">
+                                    <li class="list-group-item" style="background-color:lightgrey;"><a href="#">GIẢI NGOẠI HẠNG</a></li>
+                                    <li class="list-group-item" style="background-color:lightgrey;"><a href="#">GIẢI HẠNG NHẤT</a></li>
+                                    <li class="list-group-item" style="background-color:lightgrey;"><a href="#">CÚP FA</a></li>
+                                    <li class="list-group-item" style="background-color:lightgrey;"><a href="#">CÚP LIÊN ĐOÀN</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="col-md-8 nopadding">
+                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+
+                            </div>
+
+                            <div class="tblhotnews col-md-4 nopadding">
+                                <p>Trận hòa kỳ lạ với hai quả penalty đá hỏng đặt ra một dấu hỏi lớn cho Pep Guardiola: liệu kỷ luật sắt đá ngày một gia tăng ở Man City có phải là điều hay?</p>
+                                <table class="table table-bordered  table-striped">
+
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="#" class="thumbnail" style="background-color:lightgrey;">
+                                        <img src="images/hazard_m.jpg" alt="..."> Hazard chấm dứt 435 phút tịt ngòi ở Ngoại hạng Anh
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="thumbnail" style="background-color:lightgrey;">
+                                        <img src="images/sou_m.jpg" alt="..."> Lập kỷ lục về số thẻ đỏ, Xhaka vẫn được Wenger bảo vệ
+                                    </a>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" class="thumbnail" style="background-color:lightgrey;">
+                                        <img src="images/wenger-xhaka_m.jpg" alt="..."> Nhận định bóng đá Southampton vs Burnley, 22h00 ngày 16/10
+                                    </a>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="container-fluid">
+                                <h4><a href="#"><strong>Đừng vội chê Pep, đơn giản vì Stekelenburg quá hay</strong></a></h4>
+                                <div class="col-md-4 nopadding">
+                                    <a href="#"><img src="images/pep.jpg" /></a>
+                                </div>
+                                <div class="col-md-8 nopadding">
+                                    <p>Man City đã thất bại trong việc chấm dứt chuỗi trận không thắng liên tiếp với trận hòa trước Everton. Đó không phải vì Guardiola 'hết phép', mà là vì Maarten Stekelenburg đã chơi quá hay.</p>
+                                </div>
+                            </div>
+                        </div>
+            <hr style="height:2px;"></hr>
+            <div class="row">
+                            <div class="container-fluid">
+                                <h4><a href="#"><strong>Đừng vội chê Pep, đơn giản vì Stekelenburg quá hay</strong></a></h4>
+                                <div class="col-md-4 nopadding">
+                                    <a href="#"><img src="images/pep.jpg" /></a>
+                                </div>
+                                <div class="col-md-8 nopadding">
+                                    <p>Man City đã thất bại trong việc chấm dứt chuỗi trận không thắng liên tiếp với trận hòa trước Everton. Đó không phải vì Guardiola 'hết phép', mà là vì Maarten Stekelenburg đã chơi quá hay.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="panel panel-default" style="background-color:#f2f2f2;">
+
+                            <div class="panel-body">
+                                <h4><a href="#" style="color:#ff6600;"><span class="glyphicon glyphicon-eye-open"></span><strong> CÓ THỂ BẠN MUỐN XEM</strong></a></h4>
+                                <hr style="height:1px;border:none;color:#666666;background-color:#666666;"></hr>
+                                <div class="row">
+
+                                    <div class=" col-xs-4">
+                                        <div class="thumbnail" style="background-color:#f2f2f2; height:200px;">
+                                            <a href="#"><img src="images/barca_m.jpg" alt="My Image" /></a>
+                                            <div class="caption" style="background-color:#f2f2f2;">
+                                                <h5>Những vấn đề nổi cộm khiến Barca sa sút tại La Liga 2016/17</h5>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-xs-4">
+                                        <div class="thumbnail" style="background-color:#f2f2f2; height:200px;">
+                                            <img src="images/duc-chinh_m.jpg" alt="My Image" />
+                                            <div class="caption" style="background-color:#f2f2f2;">
+                                                <h5>Lịch thi đấu của U19 Việt Nam tại VCK U19 châu Á 2016</h5>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-4">
+                                        <div class="thumbnail" style="background-color:#f2f2f2; height:200px;">
+                                            <img src="images/klopp2_m.jpg" alt="My Image" />
+                                            <div class="caption" style="background-color:#f2f2f2;">
+                                                <h5>Klopp vẫn hoàn hảo sau 1 năm dẫn dắt Liverpool</h5>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3 sidenav nopadding">
+
+
+
+                    <div class="container=fluid">
+                        <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-bullhorn"></span> BÌNH LUẬN MỚI </p></a>
+
+
+                        </div>
+
+                        <table class="scheduler table table-striped table-condensed table-hover">
+                            <thead>
+
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Người dùng 1</h4>
+                                            <p>This is a comment</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Người dùng 2</h4>
+                                            <p>This is a comment</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Người dùng 3</h4>
+                                            <p>This is a comment</p>
+                                        </div>
+                                    </div>
+
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+<hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                    <div class="container-fluid" style="margin-top:75px;">
+
+                        <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-play-circle"></span> VIDEO</p></a>
+
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                            <iframe width="270" height="150" src="https://www.youtube.com/embed/tEZ0b4rqV9w" frameborder="0" allowfullscreen></iframe>
+                                <a href="#">Bàn thắng mừng sinh nhật Ozil</a>
+                            </li>
+                            <li class="list-group-item"><iframe width="270" height="150" src="https://www.youtube.com/embed/tEZ0b4rqV9w" frameborder="0" allowfullscreen></iframe><a href="#">Bàn thắng mừng sinh nhật Ozil</a></li>
+                            <li class="list-group-item"><iframe width="270" height="150" src="https://www.youtube.com/embed/tEZ0b4rqV9w" frameborder="0" allowfullscreen></iframe><a href="#">Bàn thắng mừng sinh nhật Ozil</a></li>
+                        </ul>
+
+
+                    </div>
+
+
+                    <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                    <div class="container-fluid" style="margin-top:75px;">
+
+                        <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
+
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">HLV Ventura xoay vòng hàng công ở trận Italia vs Tây Ban Nha</a> <span class="badge">12</span></li>
+                            <li class="list-group-item"><a href="#">Cận cảnh buổi tập đầu tiên của ĐT Anh cùng HLV Southgate</a> <span class="badge">5</span></li>
+                            <li class="list-group-item"><a href="#">Verratti vắng mặt ở trận gặp TBN: Khi người Ý thận trọng</a> <span class="badge">3</span></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <span id="top-link-block" style="">
+    <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</span>
+        <!-- /top-link-block -->
+
+
+        <footer class="container-fluid ">
+            <div class="row-content">
+                <div class="col-md-5">
+                    <p><span class="glyphicon glyphicon-th"></span> Môn học: Giao tiếp người máy</p>
+                    <p><span class="glyphicon glyphicon-cog"></span> Mã lớp: SE215.H11</p>
+                    <p><span class="glyphicon glyphicon-link"></span> Nhóm : 05</p>
+                </div>
+                <div class="col-md-4">
+                    <p><span class="glyphicon glyphicon-list"></span> Danh sách thành viên:</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Văn Trương Quốc Thắng 13520776</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Nguyễn Quang Nghĩa 13520540</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Trương Ngọc Sơn 13520715</p>
+
+                </div>
+                <div class="col-md-3">
+                    <img src="images/Web-logo.png" />
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <div class="container">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button onclick="btnCloseClick()" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">VIDEO</h4>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="btnCloseClick()" id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</html>
+<script>
+    function btnCloseClick() {
+        $("#myModal").html("");
+    }
+
+</script>
+
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>

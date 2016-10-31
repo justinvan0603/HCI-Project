@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <title>Trang chủ</title>
+</head>
+
+<style>
+    h3{
+        color: green;
+    }
+    h5{
+        color: green;
+    }
+    footer a {
+        color: white;
+    }
+    
+    .list-group-horizontal .list-group-item {
+        display: inline-block;
+    }
+    
+    .list-group-horizontal .list-group-item {
+        margin-bottom: 0;
+        margin-left: -4px;
+        margin-right: 0;
+    }
+    
+    .list-group-horizontal .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+    }
+    
+    .list-group-horizontal .list-group-item:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+    }
+    
+    #top-link-block {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .list-group-item a {
+        color: black;
+        font-weight: bold;
+    }
+    
+    .navnews a {
+        color: #009900;
+        font-weight: bold;
+    }
+    
+    .active {
+        color: red;
+        font-weight: bold;
+    }
+    
+    .tableheader {
+        color: white;
+    }
+    
+    .tableheader:hover {
+        color: #cc0000;
+    }
+    
+    .higtlightnews {
+        color: black;
+    }
+    
+    .scheduler a {
+        color: black;
+    }
+    
+    .list-group li {
+        font-size: 12px;
+    }
+    
+    .winteam {
+        color: red;
+    }
+    
+    .loseteam {
+        color: #666666;
+    }
+    
+    .scoreboard tbody tr {
+        font-size: 12, 5px;
+    }
+    
+    .item p {
+        color: black;
+        font-size: bolder;
+    }
+    
+    .tblhotnews table a {
+        color: black;
+        font-size: 12px;
+    }
+    
+    .tblhotnews table a:hover {
+        color: #cc0000;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    a:hover {
+        color: #cc0000;
+    }
+    
+    .caption {
+        display: block;
+        width: 100%;
+        background: #009900;
+        height: 55px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 55px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        box-sizing: border-box;
+    }
+    
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    .row.content {
+        height: 450px
+    }
+    
+    .sidenav {
+        padding-top: 20px;
+        background-color: white;
+        height: 100%;
+    }
+    
+    footer {
+        background-color: #333333;
+        color: white;
+        padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {
+            height: auto;
+        }
+    }
+    
+    #headerBar a {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+        width: 70%;
+        margin: auto;
+        max-width: 70% !important;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        min-height: 200px;
+    }
+    
+    .navbardropdown {
+        background-color: #00cc00;
+    }
+    
+    .navbardropdown li a {
+        color: black !important;
+    }
+
+</style>
+
+<body>
+    <object style="margin-left:10px;" width="1320" height="89">
+
+<param name="movie" value="animation.swf">
+
+<embed src="animation.swf" width="1320" height="89">
+
+</embed>
+
+</object>
+    <div class="container-fluid">
+        <a href="Index.html">
+            <img src="images/bao-bong-da.png" />
+        </a>
+        <nav id="headerBar" class="navbar " style="  background-color:#009900;">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">VIỆT NAM
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">V-LEAGUE</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">FUTSAL</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">GIẢI HẠNG NHẤT</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ĐỘI TUYỂN NỮ</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ANH
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">GIẢI NGOẠI HẠNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP LIÊN ĐOÀN</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP FA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CHAMPIONS LEAGUE
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">LỊCH THI ĐẤU-KẾT QUẢ</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">TIN TỨC</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">TÂY BAN NHA
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">LA LIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP NHÀ VUA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ý
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">SERIE A</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ĐỨC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">BUNDESLIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+       
+                        <li><a href="#">VIDEO</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">CHUYỂN NHƯỢNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ĐỘI BÓNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CẦU THỦ</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+
+            <ul class="nav navbar-nav navbar-right">
+                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            </ul>
+
+
+        </div>
+        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-md-2 sidenav nopadding">
+
+
+
+
+                    <object width="160" height="600">
+
+<param name="movie" value="animation-side.swf">
+
+<embed src="animationside.swf" width="160" height="600">
+
+</embed>
+
+</object>
+
+                </div>
+
+                <div class="col-md-7 text-left">
+
+
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h3><img src="images/video-icon.png">VIDEO NỔI BẬT</h3>
+                        </div>
+                        <div class="row">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000" pause="hover">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <div class="text-center">
+                                            <iframe width="800" height="315" src="https://www.youtube.com/embed/wYcEMtADB_E" frameborder="0" allowfullscreen></iframe>
+                                            
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h3></h3>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="text-center">
+                                            <iframe width="800" height="315" src="https://www.youtube.com/embed/JTbQkuY6RW4" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h3></h3>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="text-center">
+                                            <iframe width="800" height="315" src="https://www.youtube.com/embed/iYVBU6Tq2DI" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                        <div class="carousel-caption">
+                                            <h3></h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Controls -->
+                                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                            <!-- Carousel -->
+                        </div>
+                        <div class="row">
+                            <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                            <h5><strong><image src="images/video.png"/>VIDEO TỔNG HỢP TRẬN ĐẤU</strong></h5>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/iYVBU6Tq2DI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Ngoại hạng Anh vòng 8</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/iYVBU6Tq2DI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Ngoại hạng Anh vòng 8</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/iYVBU6Tq2DI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Ngoại hạng Anh vòng 8</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        <div class="container-fluid" style="padding-top:10px;">
+                                                    <div class="row">
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/iYVBU6Tq2DI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Ngoại hạng Anh vòng 8</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/iYVBU6Tq2DI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Ngoại hạng Anh vòng 8</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/iYVBU6Tq2DI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Ngoại hạng Anh vòng 8</p>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                                            <div class="row">
+                            <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                            <h5><strong><image src="images/videoicon1.png"/> BẢN TIN BÓNG ĐÁ</strong></h5>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/qyj-hsBGzKQ" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin 24/7</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/g3H-4Qm1Tl4" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin bóng đá 24h</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/-Oh3wSJogWc" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin 24/7</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        <div class="container-fluid" style="padding-top:10px;">
+                                                    <div class="row">
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/qyj-hsBGzKQ" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin 24/7</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                       <iframe width="220" height="150" src="https://www.youtube.com/embed/g3H-4Qm1Tl4" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin bóng đá 24h</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/-Oh3wSJogWc" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin 24/7</p>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                                                     <div class="row">
+                            <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                            <h5><strong><image src="images/smile.png"/> TROLL</strong></h5>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/wtoTrmBdNr0" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin Troll Bóng Đá số 46</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/klkhTz8bfVI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin Troll bóng đá số 47</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/UElmCqGy_oY" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin Troll bóng đá số 44</p>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        <div class="container-fluid" style="padding-top:10px;">
+                                                    <div class="row">
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/wtoTrmBdNr0" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin Troll Bóng Đá số 46</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/klkhTz8bfVI" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin Troll bóng đá số 47</p>
+                                    </div>
+                                    <div class="col-xs-4 nopadding">
+                                        <iframe width="220" height="150" src="https://www.youtube.com/embed/UElmCqGy_oY" frameborder="0" allowfullscreen></iframe>
+                                        <p>Bản tin Troll bóng đá số 44</p>
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3 sidenav nopadding">
+
+
+                    <div class="container-fluid" style="margin-top:75px;">
+
+                        <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
+
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">HLV Ventura xoay vòng hàng công ở trận Italia vs Tây Ban Nha</a> <span class="badge">12</span></li>
+                            <li class="list-group-item"><a href="#">Cận cảnh buổi tập đầu tiên của ĐT Anh cùng HLV Southgate</a> <span class="badge">5</span></li>
+                            <li class="list-group-item"><a href="#">Verratti vắng mặt ở trận gặp TBN: Khi người Ý thận trọng</a> <span class="badge">3</span></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <span id="top-link-block" style="">
+    <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Đầu trang
+    </a>
+</span>
+        <!-- /top-link-block -->
+
+
+        <footer class="container-fluid ">
+            <div class="row-content">
+                <div class="col-md-5">
+                    <p><span class="glyphicon glyphicon-th"></span> Môn học: Giao tiếp người máy</p>
+                    <p><span class="glyphicon glyphicon-cog"></span> Mã lớp: SE215.H11</p>
+                    <p><span class="glyphicon glyphicon-link"></span> Nhóm : 05</p>
+                </div>
+                <div class="col-md-4">
+                    <p><span class="glyphicon glyphicon-list"></span> Danh sách thành viên:</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Văn Trương Quốc Thắng 13520776</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Nguyễn Quang Nghĩa 13520540</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Trương Ngọc Sơn 13520715</p>
+
+                </div>
+                <div class="col-md-3">
+                    <img src="images/Web-logo.png" />
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+
+</html>
+<script>
+    function btnCloseClick() {
+        $("#myModal").html("");
+    }
+
+</script>
+
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>

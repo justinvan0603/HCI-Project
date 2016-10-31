@@ -1,0 +1,1741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <title>Trang chủ</title>
+</head>
+
+<style>
+    .navli>a{
+        font-weight: bold;
+        color: black;
+    }
+    #top-link-block {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .list-group-item a {
+        color: black;
+        font-weight: bold;
+    }
+    
+    .navnews a {
+        color: #009900;
+        font-weight: bold;
+    }
+    
+    .active {
+        color: red;
+        font-weight: bold;
+    }
+    
+    .tableheader {
+        color: white;
+    }
+    
+    .tableheader:hover {
+        color: #cc0000;
+    }
+    
+    .higtlightnews {
+        color: black;
+    }
+    
+    .scheduler a {
+        color: black;
+    }
+    
+    .list-group li {
+        font-size: 12px;
+    }
+    
+    .winteam {
+        color: red;
+    }
+    
+    .loseteam {
+        color: #666666;
+    }
+    
+    .scoreboard tbody tr {
+        font-size: 12, 5px;
+    }
+    
+    .item p {
+        color: black;
+        font-size: bolder;
+    }
+    
+    .tblhotnews table a {
+        color: black;
+        font-size: 12px;
+    }
+    
+    .tblhotnews table a:hover {
+        color: #cc0000;
+    }
+    
+    a:hover {
+        color: #cc0000;
+    }
+    
+    .caption {
+        display: block;
+        width: 100%;
+        background: #009900;
+        height: 55px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 55px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        box-sizing: border-box;
+    }
+    
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    .row.content {
+        height: 450px
+    }
+    
+    .sidenav {
+        padding-top: 20px;
+        background-color: white;
+        height: 100%;
+    }
+    
+    footer {
+        background-color: #333333;
+        color: white;
+        padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {
+            height: auto;
+        }
+    }
+    
+    #headerBar a {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+        width: 70%;
+        margin: auto;
+        max-width: 70% !important;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        min-height: 200px;
+    }
+    
+    .navbardropdown {
+        background-color: #00cc00;
+    }
+    
+    .navbardropdown li a {
+        color: black !important;
+    }
+    
+    p {
+        color:black;
+    }
+
+</style>
+
+<body>
+    <object style="margin-left:10px;" width="1320" height="89">
+
+<param name="movie" value="animation.swf">
+
+<embed src="animation.swf" width="1320" height="89">
+
+</embed>
+
+</object>
+    <div class="container-fluid">
+        <a href="Index.html">
+            <img src="images/bao-bong-da.png" />
+        </a>
+        <nav id="headerBar" class="navbar " style="  background-color:#009900;">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">VIỆT NAM
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">V-LEAGUE</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">FUTSAL</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">GIẢI HẠNG NHẤT</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ĐỘI TUYỂN NỮ</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ANH
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">GIẢI NGOẠI HẠNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP LIÊN ĐOÀN</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP FA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CHAMPIONS LEAGUE
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">LỊCH THI ĐẤU-KẾT QUẢ</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">TIN TỨC</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">TÂY BAN NHA
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">LA LIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP NHÀ VUA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ý
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">SERIE A</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ĐỨC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">BUNDESLIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+                      
+                        <li><a href="#">VIDEO</a></li>
+                       <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">CHUYỂN NHƯỢNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ĐỘI BÓNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CẦU THỦ</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            <ul class="nav navbar-nav navbar-right" style="height:20px; color:black; font-size:bolder;">
+                <li><a style="color:green;" class="text-center"><strong>Thứ bảy, 08-01-2016</strong> <span class="glyphicon glyphicon-calendar"></span></a></li>
+            </ul>
+
+        </div>
+        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-md-2 sidenav nopadding">
+
+
+
+
+                    <object width="160" height="600">
+
+<param name="movie" value="animation-side.swf">
+
+<embed src="animationside.swf" width="160" height="600">
+
+</embed>
+
+</object>
+
+                </div>
+
+                <div class="col-md-7 text-left">
+                    <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="col-md-12 nopadding">
+                                <div class="container-fluid">
+                                    <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-th-list"></span> XEM NGAY CHO NÓNG</a>
+
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="navli active"><a data-toggle="tab" href="#home">KẾT QUẢ</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#menu1">BẢNG XẾP HẠNG</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#menu2">LỊCH THI ĐẤU</a></li>
+
+                                    </ul>
+
+                                    <div class="tab-content">
+                                        <div id="home" class="tab-pane fade in active">
+                                            <div class="form-group form-inline">
+                                                <label class="input-sm" style="margin-top:4px;">Giải:</label>
+                                                <select style="margin-top:4px;" class="form-control input-sm">
+            <option><a href="#">Ngoại hạng Anh</a></option>
+            <option><a href="#">LA LIGA</a></option>
+            <option><a href="#">BUNDESLIGA</a></option>
+            <option><a href="#">SERIE A</a></option>
+        </select>
+                                            </div>
+                                            <table background="images/f-01-512.png" class="scoreboard table  table-condensed ">
+
+                                                <thead>
+
+
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><img src="fc/liverpool_30x30.png" /></td>
+                                                        <td><a class="loseteam" href="#">Liverpool</a></td>
+                                                        <td><a href="#"><strong>1-2</strong></a></td>
+                                                        <td><a class="winteam" href="#">Arsenal</a></td>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /> </td>
+                                                        <td><a class="loseteam" href="#">M.U</a></td>
+                                                        <td><a href="#"><strong>1-2</strong></a></td>
+                                                        <td><a class="winteam" href="#">M.C</a></td>
+                                                        <td><img src="fc/mancity_30x30.gif" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                        <td><a class="winteam" href="#">Arsenal</a></td>
+                                                        <td><a href="#"><strong>3-1</strong></a></td>
+                                                        <td><a class="loseteam" href="#">Chelsea</a></td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                        <td><a class="winteam" href="#">Arsenal</a></td>
+                                                        <td><a href="#"><strong>3-1</strong></a></td>
+                                                        <td><a class="loseteam" href="#">Chelsea</a></td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                        <td><a class="winteam" href="#">Arsenal</a></td>
+                                                        <td><a href="#"><strong>3-1</strong></a></td>
+                                                        <td><a class="loseteam" href="#">Chelsea</a></td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+
+                                        </div>
+                                        <div id="menu1" class="tab-pane fade">
+                                            <div class="form-group form-inline">
+                                                <label class="input-sm" style="margin-top:4px;">Giải:</label>
+                                                <select style="margin-top:4px;" class="form-control input-md">
+            <option><a href="#">Ngoại hạng Anh</a></option>
+            <option><a href="#">LA LIGA</a></option>
+            <option><a href="#">BUNDESLIGA</a></option>
+            <option><a href="#">SERIE A</a></option>
+        </select>
+                                            </div>
+                                            <div class="container-fluid" style="height:200px; overflow:auto;">
+                                                <table class="scheduler table table-striped table-condensed ">
+                                                    <thead>
+
+                                                        <tr style="color:red;">
+                                                            <th>#</th>
+                                                            <th>Đội</th>
+                                                            <th>Vòng</th>
+                                                            <th>Thắng</th>
+                                                            <th>Hòa</th>
+                                                            <th>Thua</th>
+                                                            <th>+/-</th>
+                                                            <th>Điểm</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="rank"><a href="#"><strong>1</strong></a></td>
+                                                            <td><a href="#"><strong><img src="fc/mancity_30x30.gif"/> Manchester City</strong></a></td>
+                                                            <td><strong>7</strong></td>
+                                                            <td><strong>5</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>+9</strong></td>
+                                                            <td><strong>16</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rank"><a href="#"><strong>1</strong></a></td>
+                                                            <td><a href="#"><strong><img src="fc/mancity_30x30.gif"/>Manchester City</strong></a></td>
+                                                            <td><strong>7</strong></td>
+                                                            <td><strong>5</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>+9</strong></td>
+                                                            <td><strong>16</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rank"><a href="#"><strong>1</strong></a></td>
+                                                            <td><a href="#"><strong><img src="fc/mancity_30x30.gif"/>Manchester City</strong></a></td>
+                                                            <td><strong>7</strong></td>
+                                                            <td><strong>5</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>+9</strong></td>
+                                                            <td><strong>16</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="rank"><a href="#"><strong>1</strong></a></td>
+                                                            <td><a href="#"><strong ><img src="fc/mancity_30x30.gif"/>Manchester City</strong></a></td>
+                                                            <td><strong>7</strong></td>
+                                                            <td><strong>5</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>1</strong></td>
+                                                            <td><strong>+9</strong></td>
+                                                            <td><strong>16</strong></td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="menu2" class="tab-pane fade">
+                                            <div class="form-group form-inline">
+                                                <label class="input-sm" style="margin-top:4px;">Ngày:</label>
+                                                <input style="margin-top:4px;" type="datetime" class="form-control input-sm" value="08/10/2016">
+                                            </div>
+                                            <table class="scheduler table table-striped table-condensed">
+                                                <thead>
+
+
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><a href="#">Liverpool</a></td>
+                                                        <td><a href="#"><strong>01:45</strong></a></td>
+                                                        <td><a href="#">Arsenal</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="#">M.U</a></td>
+                                                        <td><a href="#"><strong>21:30</strong></a></td>
+                                                        <td><a href="#">M.C</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="#">Arsenal</a></td>
+                                                        <td><a href="#"><strong>18:30</strong></a></td>
+                                                        <td><a href="#">Chelsea</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="#">Arsenal</a></td>
+                                                        <td><a href="#"><strong>18:30</strong></a></td>
+                                                        <td><a href="#">Chelsea</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="#">Arsenal</a></td>
+                                                        <td><a href="#"><strong>18:30</strong></a></td>
+                                                        <td><a href="#">Chelsea</a></td>
+                                                    </tr>
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="col-md-8 nopadding">
+                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                <p>SHORT DESCRIPT</p>
+                            </div>
+
+                            <div class="tblhotnews col-md-4 nopadding">
+                                <div class="caption text-center" style="background-color:#009900;"><a class="tableheader" href="#"><span class="glyphicon glyphicon-star"></span> TIN NÓNG <span class="glyphicon glyphicon-star"></span></p></a>
+
+
+                                </div>
+                                <table class="table table-bordered  table-striped">
+
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Ký ức về trận chung kết lịch sử Đức - CH Czech </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Liverpool thời Klopp đáng xem nhất Ngoại hạng Anh</strong> <span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="panel panel-default" style="background-color:#f2f2f2;">
+                            <div class="panel-body">
+                                <h4><a href="#" style="color:#ff6600;"><span class="glyphicon glyphicon-facetime-video"></span><strong> VIDEO</strong></a></h4>
+                                <hr style="height:1px;border:none;color:#666666;background-color:#666666;"></hr>
+                                <div class="carousel slide media-carousel" id="media" >
+                                    <div class="carousel-inner">
+                                        <div class="item  active">
+                                            <div class="row">
+                                                <div class="col-md-4 ">
+
+                                                    <iframe style="margin-left:10px;" width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <iframe width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <iframe width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="row">
+                                                <div class="col-md-4 ">
+                                                    <iframe style="margin-left:10px;" width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <iframe width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+
+                                                <div class="col-md-4 ">
+                                                    <iframe width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="row">
+                                                <div class="col-md-4 ">
+                                                    <iframe style="margin-left:10px;" width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <iframe width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <iframe width="130" height="80" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                                                    <p>Những pha solo ghi bàn đỉnh cao-CR7</p>
+                                                    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-play-circle"></span> Xem</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a data-slide="prev" href="#media" class="left carousel-control" style="width:15px">‹</a>
+                                    <a data-slide="next" href="#media" class="right carousel-control" style="width:15px">›</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+
+                        <div class="row">
+                            <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-th-list"></span> BÓNG ĐÁ ANH</a>
+
+
+                                <button class="btn btn-default  pull-right" style="margin-top:10px;" data-toggle="collapse" data-target="#ENG"><span class="glyphicon glyphicon-menu-down"></span></button>
+
+                            </div>
+                            <div class="collapse in container-fluid" id="ENG">
+
+                                <ul class="nav nav-tabs" style="margin-top:5px;">
+                                    <li  class="navli active"><a data-toggle="tab" href="#ANH">GIẢI NGOẠI HẠNG</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#ANH1">CÚP FA</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#ANH2">CÚP LIÊN ĐOÀN</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#ANH3">GIẢI HẠNG NHẤT</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="ANH" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="ANH1" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="ANH2" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="ANH3" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-th-list"></span> BÓNG ĐÁ VIỆT NAM</a>
+
+
+                                <button class="btn btn-default  pull-right" style="margin-top:10px;" data-toggle="collapse" data-target="#VN"><span class="glyphicon glyphicon-menu-down"></span></button>
+
+                            </div>
+                            <div class="collapse in container-fluid" id="VN">
+
+                                <ul class="nav nav-tabs" style="margin-top:5px;">
+                                    <li class="navli active"><a data-toggle="tab" href="#VN">V-LEAGUE</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#VN1">NHẬN ĐỊNH</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#VN2">ĐỘI TUYỂN</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#VN3">THI ĐẤU</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="VN" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a>
+
+                                                </h4>
+
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="VN1" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="VN2" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="VN3" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="panel panel-default" style="background-color:#f2f2f2;">
+
+                            <div class="panel-body">
+                                <h4><a href="#" style="color:#ff6600;"><span class="glyphicon glyphicon-eye-open"></span><strong> CÓ THỂ BẠN MUỐN XEM</strong></a></h4>
+                                <hr style="height:1px;border:none;color:#666666;background-color:#666666;"></hr>
+                                <div class="row">
+
+                                    <div class=" col-xs-4">
+                                        <div class="thumbnail" style="background-color:#f2f2f2; height:200px;">
+                                            <a href="#"><img src="images/barca_m.jpg" alt="My Image" /></a>
+                                            <div class="caption" style="background-color:#f2f2f2;">
+                                                <h5>Những vấn đề nổi cộm khiến Barca sa sút tại La Liga 2016/17</h5>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-xs-4">
+                                        <div class="thumbnail" style="background-color:#f2f2f2; height:200px;">
+                                            <img src="images/duc-chinh_m.jpg" alt="My Image" />
+                                            <div class="caption" style="background-color:#f2f2f2;">
+                                                <h5>Lịch thi đấu của U19 Việt Nam tại VCK U19 châu Á 2016</h5>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-4">
+                                        <div class="thumbnail" style="background-color:#f2f2f2; height:200px;">
+                                            <img src="images/klopp2_m.jpg" alt="My Image" />
+                                            <div class="caption" style="background-color:#f2f2f2;">
+                                                <h5>Klopp vẫn hoàn hảo sau 1 năm dẫn dắt Liverpool</h5>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-th-list"></span> BÓNG ĐÁ TÂY BAN NHA</a>
+
+
+                                <button class="btn btn-default  pull-right" style="margin-top:10px;" data-toggle="collapse" data-target="#SPAIN"><span class="glyphicon glyphicon-menu-down"></span></button>
+
+                            </div>
+                            <div class="collapse in container-fluid" id="SPAIN">
+
+                                <ul class=" nav nav-tabs" style="margin-top:5px;">
+                                    <li class="navli active"><a data-toggle="tab" href="#TBN">LA LIGA</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#TBN1">CÚP NHÀ VUA</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#TBN2">ĐỘI TUYỂN</a></li>
+
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="TBN" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="TBN1" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="TBN2" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-th-list"></span> BÓNG ĐÁ Ý</a>
+
+
+                                <button class="btn btn-default  pull-right" style="margin-top:10px;" data-toggle="collapse" data-target="#ITA"><span class="glyphicon glyphicon-menu-down"></span></button>
+
+                            </div>
+                            <div class="collapse in container-fluid" id="ITA">
+
+                                <ul class="nav nav-tabs" style="margin-top:5px;">
+                                    <li class="navli active"><a data-toggle="tab" href="#Y">SERIE A</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#Y1">NHẬN ĐỊNH</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#Y2">ĐỘI TUYỂN</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#Y3">THI ĐẤU</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="Y" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="Y1" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="Y2" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="Y3" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-th-list"></span> BÓNG ĐÁ ĐỨC</a>
+
+
+                                <button class="btn btn-default  pull-right" style="margin-top:10px;" data-toggle="collapse" data-target="#GER"><span class="glyphicon glyphicon-menu-down"></span></button>
+
+                            </div>
+                            <div class="collapse in container-fluid" id="GER">
+
+                                <ul class="nav nav-tabs" style="margin-top:5px;">
+                                    <li class="navli active"><a data-toggle="tab" href="#DUC">BUNDESLIGA</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#DUC1">NHẬN ĐỊNH</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#DUC2">ĐỘI TUYỂN</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#DUC3">THI ĐẤU</a></li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="DUC" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="DUC1" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="DUC2" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="DUC3" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="row">
+                            <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-th-list"></span> CHAMPION LEAGUE</a>
+
+
+                                <button class="btn btn-default  pull-right" style="margin-top:10px;" data-toggle="collapse" data-target="#CPN"><span class="glyphicon glyphicon-menu-down"></span></button>
+
+                            </div>
+                            <div class="collapse in container-fluid" id="CPN">
+
+                                <ul class="nav nav-tabs" style="margin-top:5px;">
+                                    <li class="navli active"><a data-toggle="tab" href="#CP">TIN CHÍNH</a></li>
+                                    <li class="navli"><a data-toggle="tab" href="#CP1">NHẬN ĐỊNH</a></li>
+
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div id="CP" class="tab-pane fade in active">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div id="CP1" class="tab-pane fade">
+                                        <div class="row">
+                                            <div class="col-md-8 nopadding">
+                                                <a href="www.google.com.vn"><img src="images/image-hot.jpg" /></a>
+                                                <h4><a class="higtlightnews" href="#"><strong>Loạn sứ quân, cục diện Liga xoay chuyển bất ngờ</strong></a></h4>
+                                                <p>SHORT DESCRIPT</p>
+                                            </div>
+                                            <div class="tblhotnews col-md-4 nopadding">
+                                                <table class="table table-striped">
+                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                                        <tr>
+                                                            <a href="#"><img src="images/image-hot.jpg" class="img-rounded" alt="Cinque Terre" width="250" height="120"></a>
+                                                            <a href="#"><strong>HLV Mancini dự khán trận đấu của ĐT Anh</strong></a>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong>Balotelli lập siêu phẩm </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> 60 cầu thủ thế hệ 99 triển vọng nhất thế giới (phần 3) </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span><strong> Lịch thi đấu, tường thuật bóng đá 8/10 </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><a href="google.com.vn"><span class="glyphicon glyphicon-certificate"></span> <strong> M.U khó dự Champions League vì Pogba và Ibra quá ích kỷ </strong><span class="glyphicon glyphicon-chevron-right"></span></a></td>
+                                                        </tr>
+
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3 sidenav nopadding">
+
+
+
+                    <div class="container=fluid">
+                        <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-bullhorn"></span> BÌNH LUẬN MỚI </p></a>
+
+
+                        </div>
+
+                        <table class="scheduler table table-striped table-condensed table-hover">
+                            <thead>
+
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Người dùng 1</h4>
+                                            <p>This is a comment</p>
+                                        </div>
+                                    </div>
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Người dùng 2</h4>
+                                            <p>This is a comment</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                            <h4 class="media-heading">Người dùng 3</h4>
+                                            <p>This is a comment</p>
+                                        </div>
+                                    </div>
+
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                    <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                    <div class="container-fluid" style="margin-top:75px;">
+
+                        <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
+
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">HLV Ventura xoay vòng hàng công ở trận Italia vs Tây Ban Nha</a> <span class="badge">12</span></li>
+                            <li class="list-group-item"><a href="#">Cận cảnh buổi tập đầu tiên của ĐT Anh cùng HLV Southgate</a> <span class="badge">5</span></li>
+                            <li class="list-group-item"><a href="#">Verratti vắng mặt ở trận gặp TBN: Khi người Ý thận trọng</a> <span class="badge">3</span></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <span id="top-link-block" style="">
+    <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+    </a>
+</span>
+        <!-- /top-link-block -->
+
+
+        <footer class="container-fluid ">
+            <div class="row-content">
+                <div class="col-md-5" >
+                    <p style="color:white;"><span class="glyphicon glyphicon-th"></span> Môn học: Giao tiếp người máy</p>
+                    <p style="color:white;"><span class="glyphicon glyphicon-cog"></span> Mã lớp: SE215.H11</p>
+                    <p style="color:white;"><span class="glyphicon glyphicon-link"></span> Nhóm : 05</p>
+                </div>
+                <div class="col-md-4">
+                    <p style="color:white;"><span class="glyphicon glyphicon-list"></span> Danh sách thành viên:</p>
+                    <p style="color:white;"><span class="glyphicon glyphicon-tag"></span> Văn Trương Quốc Thắng 13520776</p>
+                    <p style="color:white;"><span class="glyphicon glyphicon-tag"></span> Nguyễn Quang Nghĩa 13520540</p>
+                    <p style="color:white;"><span class="glyphicon glyphicon-tag"></span> Trương Ngọc Sơn 13520715</p>
+
+                </div>
+                <div class="col-md-3">
+                    <img src="images/Web-logo.png" />
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+    <div class="container">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button onclick="btnCloseClick()" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">VIDEO</h4>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/pbUwvU75zKM" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="btnCloseClick()" id="btnClose" type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</html>
+<script>
+    function btnCloseClick() {
+        
+        location.reload();
+    }
+
+</script>
+
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
