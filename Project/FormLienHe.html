@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <title>Liên hệ</title>
+</head>
+
+<style>
+    #login-modal .modal-dialog {
+        width: 350px;
+    }
+    
+    #login-modal input[type=text],
+    input[type=password] {
+        margin-top: 10px;
+    }
+    
+    #div-login-msg,
+    #div-lost-msg,
+    #div-register-msg {
+        border: 1px solid #dadfe1;
+        height: 30px;
+        line-height: 28px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #div-login-msg.success,
+    #div-lost-msg.success,
+    #div-register-msg.success {
+        border: 1px solid #68c3a3;
+        background-color: #c8f7c5;
+    }
+    
+    #div-login-msg.error,
+    #div-lost-msg.error,
+    #div-register-msg.error {
+        border: 1px solid #eb575b;
+        background-color: #ffcad1;
+    }
+    
+    #icon-login-msg,
+    #icon-lost-msg,
+    #icon-register-msg {
+        width: 30px;
+        float: left;
+        line-height: 28px;
+        text-align: center;
+        background-color: #dadfe1;
+        margin-right: 5px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #icon-login-msg.success,
+    #icon-lost-msg.success,
+    #icon-register-msg.success {
+        background-color: #68c3a3 !important;
+    }
+    
+    #icon-login-msg.error,
+    #icon-lost-msg.error,
+    #icon-register-msg.error {
+        background-color: #eb575b !important;
+    }
+    
+    #img_logo {
+        max-height: 100px;
+        max-width: 100px;
+    }
+    /* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+    
+    .modal-backdrop.in {
+        filter: alpha(opacity=50);
+        opacity: .8;
+    }
+    
+    .modal-content {
+        background-color: #ececec;
+        border: 1px solid #bdc3c7;
+        border-radius: 0px;
+        outline: 0;
+    }
+    
+    .modal-header {
+        min-height: 16.43px;
+        padding: 15px 15px 15px 15px;
+        border-bottom: 0px;
+    }
+    
+    .modal-body {
+        position: relative;
+        padding: 5px 15px 5px 15px;
+    }
+    
+    .modal-footer {
+        padding: 15px 15px 15px 15px;
+        text-align: left;
+        border-top: 0px;
+    }
+    
+    .checkbox {
+        margin-bottom: 0px;
+    }
+    
+    .btn {
+        border-radius: 0px;
+    }
+    
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;
+    }
+    
+    .btn-lg,
+    .btn-group-lg>.btn {
+        border-radius: 0px;
+    }
+    
+    .btn-link {
+        padding: 5px 10px 0px 0px;
+        color: #95a5a6;
+    }
+    
+    .btn-link:hover,
+    .btn-link:focus {
+        color: #2c3e50;
+        text-decoration: none;
+    }
+    
+    .glyphicon {
+        top: 0px;
+    }
+    
+    .form-control {
+        border-radius: 0px;
+    }
+    lbl {
+        color: black;
+    }
+    
+    .tblchuyennhuong {
+        margin-top: 10px;
+    }
+    
+    .tblchuyennhuong>thead>tr>th {
+        background-color: lightgrey;
+    }
+    
+    footer a {
+        color: white;
+    }
+    
+    .list-group-horizontal .list-group-item {
+        display: inline-block;
+    }
+    
+    .list-group-horizontal .list-group-item {
+        margin-bottom: 0;
+        margin-left: -4px;
+        margin-right: 0;
+    }
+    
+    .list-group-horizontal .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+    }
+    
+    .list-group-horizontal .list-group-item:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+    }
+    
+    #top-link-block {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .list-group-item a {
+        color: black;
+        font-weight: bold;
+    }
+    
+    .navnews a {
+        color: #009900;
+        font-weight: bold;
+    }
+    
+    .active {
+        color: red;
+        font-weight: bold;
+    }
+    
+    .tableheader {
+        color: white;
+    }
+    
+    .tableheader:hover {
+        color: #cc0000;
+    }
+    
+    .higtlightnews {
+        color: black;
+    }
+    
+    .scheduler a {
+        color: black;
+    }
+    
+    .list-group li {
+        font-size: 12px;
+    }
+    
+    .winteam {
+        color: red;
+    }
+    
+    .loseteam {
+        color: #666666;
+    }
+    
+    .scoreboard tbody tr {
+        font-size: 12, 5px;
+    }
+    
+    .item p {
+        color: black;
+        font-size: bolder;
+    }
+    
+    .tblhotnews table a {
+        color: black;
+        font-size: 12px;
+    }
+    
+    .tblhotnews table a:hover {
+        color: #cc0000;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    a:hover {
+        color: #cc0000;
+    }
+    
+    .caption {
+        display: block;
+        width: 100%;
+        background: #009900;
+        height: 55px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 55px;
+        
+        box-sizing: border-box;
+    }
+    
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    .row.content {
+        height: 450px
+    }
+    
+    .sidenav {
+        padding-top: 20px;
+        background-color: white;
+        height: 100%;
+    }
+    
+    footer {
+        background-color: #333333;
+        color: white;
+        padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {
+            height: auto;
+        }
+    }
+    
+    #headerBar a {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+        width: 70%;
+        margin: auto;
+        max-width: 70% !important;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        min-height: 200px;
+    }
+    
+    .navbardropdown {
+        background-color: #00cc00;
+    }
+    
+    .navbardropdown li a {
+        color: black !important;
+    }
+
+</style>
+
+<body>
+    <object style="margin-left:10px;" width="1320" height="89">
+
+<param name="movie" value="animation.swf">
+
+<embed src="animation.swf" width="1320" height="89">
+
+</embed>
+
+</object>
+    <div class="container-fluid">
+        <a href="Index.html">
+            <img src="images/bao-bong-da.png" />
+        </a>
+        <nav id="headerBar" class="navbar " style="  background-color:#009900;">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="Index.html"><span class="glyphicon glyphicon-home"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">VIỆT NAM
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="DanhSachBaiViet.html">V-LEAGUE</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">FUTSAL</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">GIẢI HẠNG NHẤT</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">ĐỘI TUYỂN NỮ</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ANH
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="DanhSachBaiViet.html">GIẢI NGOẠI HẠNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP LIÊN ĐOÀN</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP FA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CHAMPIONS LEAGUE
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="DanhSachBaiViet.html">TIN TỨC</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">NHẬN ĐỊNH</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">TÂY BAN NHA
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="DanhSachBaiViet.html">LA LIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP NHÀ VUA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ý
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="DanhSachBaiViet.html">SERIE A</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ĐỨC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="DanhSachBaiViet.html">BUNDESLIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li><a href="Video.html">VIDEO</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="ChuyenNhuong.html">CHUYỂN NHƯỢNG</a></li>
+                   <li role="separator" class="divider"></li>
+                                <li><a href="LichThiDau.html">LỊCH THI ĐẤU</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="BangKetQua.html">KẾT QUẢ</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+
+            <ul class="nav navbar-nav navbar-right">
+                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            </ul>
+
+
+        </div>
+        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-md-2 sidenav nopadding">
+
+
+
+
+                    <object width="160" height="600">
+
+<param name="movie" value="animation-side.swf">
+
+<embed src="animationside.swf" width="160" height="600">
+
+</embed>
+
+</object>
+
+                </div>
+
+                <div class="col-md-7 text-left">
+
+
+
+                    <div class="container-fluid">
+                        <div class="caption text-center" style="background-color:#009900;"><a class="tableheader" href="#"><span class="glyphicon glyphicon-envelope"></span> LIÊN HỆ QUẢNG CÁO </p></a>
+                            <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                            <h3 style="color:red;">Thông tin chung</h3>
+                            <div class="row">
+                                <div class="col-md-1 nopadding">
+                                    <label><span style="color:grey;" class="glyphicon glyphicon-user"></span></label>
+                                </div>
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" placeholder="*Họ tên" />
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 nopadding">
+                                    <label><span style="color:grey;" class="glyphicon glyphicon-home"></span></label>
+                                </div>
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" placeholder="*Địa chỉ" />
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 nopadding">
+                                    <label><span style="color:grey;" class="glyphicon glyphicon-envelope"></span></label>
+                                </div>
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" placeholder="*Email" />
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 nopadding">
+                                    <label><span style="color:grey;" class="glyphicon glyphicon-earphone"></span></label>
+                                </div>
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" placeholder="*Điện thoại" />
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 nopadding">
+                                    <label><span style="color:grey;" class="glyphicon glyphicon-bookmark"></span></label>
+                                </div>
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" placeholder="*Địa chỉ" />
+                                </div>
+
+                            </div>
+                            <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                            <h3 style="color:red;">Thông tin bổ sung</h3>
+                            <div class="row">
+                                <div class="col-md-1 nopadding">
+                                    <label><span style="color:grey;" class="glyphicon glyphicon-film"></span></label>
+                                </div>
+                                <div class="col-md-11">
+                                    <input type="text" class="form-control" placeholder="*Thời lượng chạy quảng cáo" />
+                                </div>
+
+                            </div>
+                                        <div class="row">
+                                <div class="col-md-4 nopadding">
+                                    <label style="color:grey;">Vị trí đặt quảng cáo:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select class="form-control">
+                                        <option>Đầu trang</option>
+                                        <option>Cạnh trái của trang</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-3 sidenav nopadding">
+
+
+
+                    <div class="container=fluid">
+
+
+                        
+                        <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">GIẢI BÓNG HÀNG ĐẦU</p></a>
+
+
+                        </div>
+                        <ul class="list-group text-left">
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/68.png" /> NGOẠI HẠNG ANH</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/7.png" /> CHAMPIONS LEAGUE</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/176.png" /> LA LIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/80.png" /> BUNDESLIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/100.png" /> SERIE A</a>
+                            </li>
+                        </ul>
+
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="container-fluid">
+
+                            <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
+
+
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="ChiTietBaiViet.html">HLV Ventura xoay vòng hàng công ở trận Italia vs Tây Ban Nha</a> <span class="badge">12</span></li>
+                                <li class="list-group-item"><a href="ChiTietBaiViet.html">Cận cảnh buổi tập đầu tiên của ĐT Anh cùng HLV Southgate</a> <span class="badge">5</span></li>
+                                <li class="list-group-item"><a href="ChiTietBaiViet.html">Verratti vắng mặt ở trận gặp TBN: Khi người Ý thận trọng</a> <span class="badge">3</span></li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <span id="top-link-block" style="">
+    <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Đầu trang
+    </a>
+</span>
+            <!-- /top-link-block -->
+
+
+            <footer class="container-fluid " style="margin-top:300px;">
+                <div class="row-content">
+                    <div class="col-md-5">
+                        <p><span class="glyphicon glyphicon-th"></span> Môn học: Giao tiếp người máy</p>
+                        <p><span class="glyphicon glyphicon-cog"></span> Mã lớp: SE215.H11</p>
+                        <p><span class="glyphicon glyphicon-link"></span> Nhóm : 05</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p><span class="glyphicon glyphicon-list"></span> Danh sách thành viên:</p>
+                        <p><span class="glyphicon glyphicon-tag"></span> Văn Trương Quốc Thắng 13520776</p>
+                        <p><span class="glyphicon glyphicon-tag"></span> Nguyễn Quang Nghĩa 13520540</p>
+                        <p><span class="glyphicon glyphicon-tag"></span> Trương Ngọc Sơn 13520715</p>
+
+                    </div>
+                    <div class="col-md-3">
+                        <img src="images/Web-logo.png" />
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img class="img-circle" id="img_logo" src="img/Football.ico">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+                </div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Nhập thông tin tài khoản</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Nhớ mật khẩu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Type your e-mail.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register an account.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+    </div>
+</html>
+<script>
+    function btnCloseClick() {
+        $("#myModal").html("");
+    }
+
+</script>
+
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>

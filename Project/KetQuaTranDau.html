@@ -7,10 +7,143 @@
 
     <link href="./css/bootstrap.css" rel="stylesheet">
 
-    <title>Trang chủ</title>
+    <title>Diễn biến</title>
 </head>
 
 <style>
+    #login-modal .modal-dialog {
+        width: 350px;
+    }
+    
+    #login-modal input[type=text],
+    input[type=password] {
+        margin-top: 10px;
+    }
+    
+    #div-login-msg,
+    #div-lost-msg,
+    #div-register-msg {
+        border: 1px solid #dadfe1;
+        height: 30px;
+        line-height: 28px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #div-login-msg.success,
+    #div-lost-msg.success,
+    #div-register-msg.success {
+        border: 1px solid #68c3a3;
+        background-color: #c8f7c5;
+    }
+    
+    #div-login-msg.error,
+    #div-lost-msg.error,
+    #div-register-msg.error {
+        border: 1px solid #eb575b;
+        background-color: #ffcad1;
+    }
+    
+    #icon-login-msg,
+    #icon-lost-msg,
+    #icon-register-msg {
+        width: 30px;
+        float: left;
+        line-height: 28px;
+        text-align: center;
+        background-color: #dadfe1;
+        margin-right: 5px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #icon-login-msg.success,
+    #icon-lost-msg.success,
+    #icon-register-msg.success {
+        background-color: #68c3a3 !important;
+    }
+    
+    #icon-login-msg.error,
+    #icon-lost-msg.error,
+    #icon-register-msg.error {
+        background-color: #eb575b !important;
+    }
+    
+    #img_logo {
+        max-height: 100px;
+        max-width: 100px;
+    }
+    /* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+    
+    .modal-backdrop.in {
+        filter: alpha(opacity=50);
+        opacity: .8;
+    }
+    
+    .modal-content {
+        background-color: #ececec;
+        border: 1px solid #bdc3c7;
+        border-radius: 0px;
+        outline: 0;
+    }
+    
+    .modal-header {
+        min-height: 16.43px;
+        padding: 15px 15px 15px 15px;
+        border-bottom: 0px;
+    }
+    
+    .modal-body {
+        position: relative;
+        padding: 5px 15px 5px 15px;
+    }
+    
+    .modal-footer {
+        padding: 15px 15px 15px 15px;
+        text-align: left;
+        border-top: 0px;
+    }
+    
+    .checkbox {
+        margin-bottom: 0px;
+    }
+    
+    .btn {
+        border-radius: 0px;
+    }
+    
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;
+    }
+    
+    .btn-lg,
+    .btn-group-lg>.btn {
+        border-radius: 0px;
+    }
+    
+    .btn-link {
+        padding: 5px 10px 0px 0px;
+        color: #95a5a6;
+    }
+    
+    .btn-link:hover,
+    .btn-link:focus {
+        color: #2c3e50;
+        text-decoration: none;
+    }
+    
+    .glyphicon {
+        top: 0px;
+    }
+    
+    .form-control {
+        border-radius: 0px;
+    }
     .progress-bar {
         background-color: #e6e6e6;
         height: 25px;
@@ -156,7 +289,7 @@
         color: #fff;
         font-size: 20px;
         line-height: 55px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        
         box-sizing: border-box;
     }
     
@@ -168,7 +301,7 @@
         color: #fff;
         font-size: 20px;
         line-height: 55px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+       
         box-sizing: border-box;
     }
     
@@ -233,6 +366,7 @@
     .navbardropdown li a {
         color: black !important;
     }
+
 </style>
 
 <body>
@@ -254,7 +388,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+                    <a class="navbar-brand" href="Index.html"><span class="glyphicon glyphicon-home"></span></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -330,16 +464,16 @@
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
                                 <li><a href="#">CHUYỂN NHƯỢNG</a></li>
+                   <li role="separator" class="divider"></li>
+                                <li><a href="LichThiDau.html">LỊCH THI ĐẤU</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">ĐỘI BÓNG</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="#">CẦU THỦ</a></li>
+                                <li><a href="BangKetQua.html">KẾT QUẢ</a></li>
 
                             </ul>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -358,72 +492,70 @@
                 <div class="col-md-3 sidenav ">
 
 
-                    <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                    
                     <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">ĐỘI HÌNH CHÍNH</p></a>
 
 
                     </div>
                     <ul class="list-group text-left">
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> NGOẠI HẠNG ANH</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> 1-De Gea </a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> CHAMPIONS LEAGUE</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> 36-M. Darmian</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> LA LIGA</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> 23-L. Shaw</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> BUNDESLIGA</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> 21-Ander Herrera</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> SERIE A</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> 17-D. Blind</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><img src="images/nophoto_t.png" /> 5-M. Rojo</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><img src="images/nophoto_t.png" /> 14-J. Lingard</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><img src="images/nophoto_t.png" /> 6-Pogba</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><img src="images/nophoto_t.png" /> 9-Z. Ibrahimović</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><img src="images/nophoto_t.png" /> 8-Mata</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#"><img src="images/nophoto_t.png" /> 19-M. Rashford</a>
                         </li>
                     </ul>
                     <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                    <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">ĐỘI HÌNH PHỤ</p></a>
+                    <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">ĐỘI HÌNH DỰ BỊ</p></a>
 
 
                     </div>
                     <ul class="list-group text-left">
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> NGOẠI HẠNG ANH</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> M. Depay</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> CHAMPIONS LEAGUE</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> W. Rooney</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> LA LIGA</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> M. Carrick</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> BUNDESLIGA</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> A. Young</a>
                         </li>
                         <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> SERIE A</a>
+                            <a href="#"><img src="images/nophoto_t.png" /> S. Romero</a>
                         </li>
                     </ul>
-                    <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                    <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">DỰ BỊ</p></a>
 
 
-                    </div>
-                    <ul class="list-group text-left">
-                        <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> NGOẠI HẠNG ANH</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> CHAMPIONS LEAGUE</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> LA LIGA</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> BUNDESLIGA</a>
-                        </li>
-                        <li class="list-group-item">
-                            <a href="#"><img src="images/nophoto_t.png" /> SERIE A</a>
-                        </li>
-                    </ul>
 
                 </div>
 
@@ -462,10 +594,16 @@
                                 <h4 style="margin-left:30px;"><a href="#">BURNLEY</a></h4>
                             </div>
                         </div>
+
+
                         <div class="row">
                             <div class="row teamcaption" style="color:red;">
                                 <h4>DIỄN BIẾN CHÍNH</h4>
 
+                            </div>
+                            <div class="row text-center">
+
+                                <iframe src="http://www.scoresway.com/?sport=soccer&amp;page=match&amp;view=pitchview&amp;id=2241851" width="540" height="390" frameborder="0" scrolling="no"></iframe>
                             </div>
                             <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
                             <div class="row" style="margin-top:10px;">
@@ -693,7 +831,7 @@
 
                                                 </tr>
 
-                                        <tr>
+                                                <tr>
                                                     <td>Giám sát trọng tài</td>
                                                     <td class="giai"><img src="images/avatar.png" /></td>
 
@@ -707,6 +845,7 @@
                                 </div>
 
                             </div>
+
                         </div>
 
                     </div>
@@ -722,26 +861,45 @@
                     <div class="container=fluid">
 
 
-                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        
                         <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">ĐỘI HÌNH CHÍNH</p></a>
 
 
                         </div>
                         <ul class="list-group text-left">
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> NGOẠI HẠNG ANH</a>
+                                <a href="#"><img src="images/nophoto_t.png" />1-T. Heaton </a>
+
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> CHAMPIONS LEAGUE</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> 2-M. Lowton </a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> LA LIGA</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> 23-S. Ward</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> BUNDESLIGA</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> 13-J. Hendrick</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> SERIE A</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> 5-M. Keane</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/nophoto_t.png" /> 6-B. Mee</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/nophoto_t.png" /> 37-S. Arfield </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/nophoto_t.png" /> 8-D. Marney</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/nophoto_t.png" /> 9-S. Vokes</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/nophoto_t.png" /> 7-A. Gray</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/nophoto_t.png" /> 25-J. Guðmunds­son</a>
                             </li>
                         </ul>
                         <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
@@ -751,43 +909,22 @@
                         </div>
                         <ul class="list-group text-left">
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> NGOẠI HẠNG ANH</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> J. Flanagan</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> CHAMPIONS LEAGUE</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> A. Barnes</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> LA LIGA</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> P. Bamford</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> BUNDESLIGA</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> P. Robinson </a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> SERIE A</a>
+                                <a href="#"><img src="images/nophoto_t.png" /> G. Boyd</a>
                             </li>
                         </ul>
-                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                        <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">DỰ BỊ</p></a>
 
-
-                        </div>
-                        <ul class="list-group text-left">
-                            <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> NGOẠI HẠNG ANH</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> CHAMPIONS LEAGUE</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> LA LIGA</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> BUNDESLIGA</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#"><img src="images/nophoto_t.png" /> SERIE A</a>
-                            </li>
-                        </ul>
                     </div>
 
                 </div>
@@ -800,7 +937,7 @@
 
         <span id="top-link-block" style="">
     <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
-        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+        <i class="glyphicon glyphicon-chevron-up"></i> Đầu trang
     </a>
 </span>
         <!-- /top-link-block -->
@@ -810,7 +947,7 @@
 
     </div>
 
-    <footer class="container-fluid" >
+    <footer class="container-fluid">
         <div class="row-content">
             <div class="col-md-5">
                 <p><span class="glyphicon glyphicon-th"></span> Môn học: Giao tiếp người máy</p>
@@ -830,7 +967,96 @@
         </div>
 
     </footer>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img class="img-circle" id="img_logo" src="img/Football.ico">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+                </div>
 
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Nhập thông tin tài khoản</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Nhớ mật khẩu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Type your e-mail.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register an account.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+    </div>
 </html>
 <script>
     $(function() {

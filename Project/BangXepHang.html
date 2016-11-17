@@ -1,0 +1,1332 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <title>Bảng xếp hạng</title>
+</head>
+
+<style>
+    #login-modal .modal-dialog {
+        width: 350px;
+    }
+    
+    #login-modal input[type=text],
+    input[type=password] {
+        margin-top: 10px;
+    }
+    
+    #div-login-msg,
+    #div-lost-msg,
+    #div-register-msg {
+        border: 1px solid #dadfe1;
+        height: 30px;
+        line-height: 28px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #div-login-msg.success,
+    #div-lost-msg.success,
+    #div-register-msg.success {
+        border: 1px solid #68c3a3;
+        background-color: #c8f7c5;
+    }
+    
+    #div-login-msg.error,
+    #div-lost-msg.error,
+    #div-register-msg.error {
+        border: 1px solid #eb575b;
+        background-color: #ffcad1;
+    }
+    
+    #icon-login-msg,
+    #icon-lost-msg,
+    #icon-register-msg {
+        width: 30px;
+        float: left;
+        line-height: 28px;
+        text-align: center;
+        background-color: #dadfe1;
+        margin-right: 5px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #icon-login-msg.success,
+    #icon-lost-msg.success,
+    #icon-register-msg.success {
+        background-color: #68c3a3 !important;
+    }
+    
+    #icon-login-msg.error,
+    #icon-lost-msg.error,
+    #icon-register-msg.error {
+        background-color: #eb575b !important;
+    }
+    
+    #img_logo {
+        max-height: 100px;
+        max-width: 100px;
+    }
+    /* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+    
+    .modal-backdrop.in {
+        filter: alpha(opacity=50);
+        opacity: .8;
+    }
+    
+    .modal-content {
+        background-color: #ececec;
+        border: 1px solid #bdc3c7;
+        border-radius: 0px;
+        outline: 0;
+    }
+    
+    .modal-header {
+        min-height: 16.43px;
+        padding: 15px 15px 15px 15px;
+        border-bottom: 0px;
+    }
+    
+    .modal-body {
+        position: relative;
+        padding: 5px 15px 5px 15px;
+    }
+    
+    .modal-footer {
+        padding: 15px 15px 15px 15px;
+        text-align: left;
+        border-top: 0px;
+    }
+    
+    .checkbox {
+        margin-bottom: 0px;
+    }
+    
+    .btn {
+        border-radius: 0px;
+    }
+    
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;
+    }
+    
+    .btn-lg,
+    .btn-group-lg>.btn {
+        border-radius: 0px;
+    }
+    
+    .btn-link {
+        padding: 5px 10px 0px 0px;
+        color: #95a5a6;
+    }
+    
+    .btn-link:hover,
+    .btn-link:focus {
+        color: #2c3e50;
+        text-decoration: none;
+    }
+    
+    .glyphicon {
+        top: 0px;
+    }
+    
+    .form-control {
+        border-radius: 0px;
+    }
+    .panel.with-nav-tabs .panel-heading {
+        padding: 5px 5px 0 5px;
+    }
+    
+    .panel.with-nav-tabs .nav-tabs {
+        border-bottom: none;
+    }
+    
+    .panel.with-nav-tabs .nav-justified {
+        margin-bottom: -1px;
+    }
+    /********************************************************************/
+    /*** PANEL DEFAULT ***/
+    
+    .with-nav-tabs.panel-default .nav-tabs>li>a,
+    .with-nav-tabs.panel-default .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-default .nav-tabs>li>a:focus {
+        color: #777;
+    }
+    
+    .with-nav-tabs.panel-default .nav-tabs>.open>a,
+    .with-nav-tabs.panel-default .nav-tabs>.open>a:hover,
+    .with-nav-tabs.panel-default .nav-tabs>.open>a:focus,
+    .with-nav-tabs.panel-default .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-default .nav-tabs>li>a:focus {
+        color: #777;
+        background-color: #ddd;
+        border-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-default .nav-tabs>li.active>a,
+    .with-nav-tabs.panel-default .nav-tabs>li.active>a:hover,
+    .with-nav-tabs.panel-default .nav-tabs>li.active>a:focus {
+        color: #555;
+        background-color: #fff;
+        border-color: #ddd;
+        border-bottom-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-default .nav-tabs>li.dropdown .dropdown-menu {
+        background-color: #f5f5f5;
+        border-color: #ddd;
+    }
+    
+    .with-nav-tabs.panel-default .nav-tabs>li.dropdown .dropdown-menu>li>a {
+        color: #777;
+    }
+    
+    .with-nav-tabs.panel-default .nav-tabs>li.dropdown .dropdown-menu>li>a:hover,
+    .with-nav-tabs.panel-default .nav-tabs>li.dropdown .dropdown-menu>li>a:focus {
+        background-color: #ddd;
+    }
+    
+    .with-nav-tabs.panel-default .nav-tabs>li.dropdown .dropdown-menu>.active>a,
+    .with-nav-tabs.panel-default .nav-tabs>li.dropdown .dropdown-menu>.active>a:hover,
+    .with-nav-tabs.panel-default .nav-tabs>li.dropdown .dropdown-menu>.active>a:focus {
+        color: #fff;
+        background-color: #555;
+    }
+    /********************************************************************/
+    /*** PANEL PRIMARY ***/
+    
+    .with-nav-tabs.panel-primary .nav-tabs>li>a,
+    .with-nav-tabs.panel-primary .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs>li>a:focus {
+        color: #fff;
+    }
+    
+    .with-nav-tabs.panel-primary .nav-tabs>.open>a,
+    .with-nav-tabs.panel-primary .nav-tabs>.open>a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs>.open>a:focus,
+    .with-nav-tabs.panel-primary .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs>li>a:focus {
+        color: #fff;
+        background-color: #3071a9;
+        border-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-primary .nav-tabs>li.active>a,
+    .with-nav-tabs.panel-primary .nav-tabs>li.active>a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs>li.active>a:focus {
+        color: #428bca;
+        background-color: #fff;
+        border-color: #428bca;
+        border-bottom-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-primary .nav-tabs>li.dropdown .dropdown-menu {
+        background-color: #428bca;
+        border-color: #3071a9;
+    }
+    
+    .with-nav-tabs.panel-primary .nav-tabs>li.dropdown .dropdown-menu>li>a {
+        color: #fff;
+    }
+    
+    .with-nav-tabs.panel-primary .nav-tabs>li.dropdown .dropdown-menu>li>a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs>li.dropdown .dropdown-menu>li>a:focus {
+        background-color: #3071a9;
+    }
+    
+    .with-nav-tabs.panel-primary .nav-tabs>li.dropdown .dropdown-menu>.active>a,
+    .with-nav-tabs.panel-primary .nav-tabs>li.dropdown .dropdown-menu>.active>a:hover,
+    .with-nav-tabs.panel-primary .nav-tabs>li.dropdown .dropdown-menu>.active>a:focus {
+        background-color: #4a9fe9;
+    }
+    /********************************************************************/
+    /*** PANEL SUCCESS ***/
+    
+    .with-nav-tabs.panel-success .nav-tabs>li>a,
+    .with-nav-tabs.panel-success .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-success .nav-tabs>li>a:focus {
+        color: #3c763d;
+    }
+    
+    .with-nav-tabs.panel-success .nav-tabs>.open>a,
+    .with-nav-tabs.panel-success .nav-tabs>.open>a:hover,
+    .with-nav-tabs.panel-success .nav-tabs>.open>a:focus,
+    .with-nav-tabs.panel-success .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-success .nav-tabs>li>a:focus {
+        color: #3c763d;
+        background-color: #d6e9c6;
+        border-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-success .nav-tabs>li.active>a,
+    .with-nav-tabs.panel-success .nav-tabs>li.active>a:hover,
+    .with-nav-tabs.panel-success .nav-tabs>li.active>a:focus {
+        color: #3c763d;
+        background-color: #fff;
+        border-color: #d6e9c6;
+        border-bottom-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-success .nav-tabs>li.dropdown .dropdown-menu {
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+    }
+    
+    .with-nav-tabs.panel-success .nav-tabs>li.dropdown .dropdown-menu>li>a {
+        color: #3c763d;
+    }
+    
+    .with-nav-tabs.panel-success .nav-tabs>li.dropdown .dropdown-menu>li>a:hover,
+    .with-nav-tabs.panel-success .nav-tabs>li.dropdown .dropdown-menu>li>a:focus {
+        background-color: #d6e9c6;
+    }
+    
+    .with-nav-tabs.panel-success .nav-tabs>li.dropdown .dropdown-menu>.active>a,
+    .with-nav-tabs.panel-success .nav-tabs>li.dropdown .dropdown-menu>.active>a:hover,
+    .with-nav-tabs.panel-success .nav-tabs>li.dropdown .dropdown-menu>.active>a:focus {
+        color: #fff;
+        background-color: #3c763d;
+    }
+    /********************************************************************/
+    /*** PANEL INFO ***/
+    
+    .with-nav-tabs.panel-info .nav-tabs>li>a,
+    .with-nav-tabs.panel-info .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-info .nav-tabs>li>a:focus {
+        color: #31708f;
+    }
+    
+    .with-nav-tabs.panel-info .nav-tabs>.open>a,
+    .with-nav-tabs.panel-info .nav-tabs>.open>a:hover,
+    .with-nav-tabs.panel-info .nav-tabs>.open>a:focus,
+    .with-nav-tabs.panel-info .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-info .nav-tabs>li>a:focus {
+        color: #31708f;
+        background-color: #bce8f1;
+        border-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-info .nav-tabs>li.active>a,
+    .with-nav-tabs.panel-info .nav-tabs>li.active>a:hover,
+    .with-nav-tabs.panel-info .nav-tabs>li.active>a:focus {
+        color: #31708f;
+        background-color: #fff;
+        border-color: #bce8f1;
+        border-bottom-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-info .nav-tabs>li.dropdown .dropdown-menu {
+        background-color: #d9edf7;
+        border-color: #bce8f1;
+    }
+    
+    .with-nav-tabs.panel-info .nav-tabs>li.dropdown .dropdown-menu>li>a {
+        color: #31708f;
+    }
+    
+    .with-nav-tabs.panel-info .nav-tabs>li.dropdown .dropdown-menu>li>a:hover,
+    .with-nav-tabs.panel-info .nav-tabs>li.dropdown .dropdown-menu>li>a:focus {
+        background-color: #bce8f1;
+    }
+    
+    .with-nav-tabs.panel-info .nav-tabs>li.dropdown .dropdown-menu>.active>a,
+    .with-nav-tabs.panel-info .nav-tabs>li.dropdown .dropdown-menu>.active>a:hover,
+    .with-nav-tabs.panel-info .nav-tabs>li.dropdown .dropdown-menu>.active>a:focus {
+        color: #fff;
+        background-color: #31708f;
+    }
+    /********************************************************************/
+    /*** PANEL WARNING ***/
+    
+    .with-nav-tabs.panel-warning .nav-tabs>li>a,
+    .with-nav-tabs.panel-warning .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-warning .nav-tabs>li>a:focus {
+        color: #8a6d3b;
+    }
+    
+    .with-nav-tabs.panel-warning .nav-tabs>.open>a,
+    .with-nav-tabs.panel-warning .nav-tabs>.open>a:hover,
+    .with-nav-tabs.panel-warning .nav-tabs>.open>a:focus,
+    .with-nav-tabs.panel-warning .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-warning .nav-tabs>li>a:focus {
+        color: #8a6d3b;
+        background-color: #faebcc;
+        border-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-warning .nav-tabs>li.active>a,
+    .with-nav-tabs.panel-warning .nav-tabs>li.active>a:hover,
+    .with-nav-tabs.panel-warning .nav-tabs>li.active>a:focus {
+        color: #8a6d3b;
+        background-color: #fff;
+        border-color: #faebcc;
+        border-bottom-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-warning .nav-tabs>li.dropdown .dropdown-menu {
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    
+    .with-nav-tabs.panel-warning .nav-tabs>li.dropdown .dropdown-menu>li>a {
+        color: #8a6d3b;
+    }
+    
+    .with-nav-tabs.panel-warning .nav-tabs>li.dropdown .dropdown-menu>li>a:hover,
+    .with-nav-tabs.panel-warning .nav-tabs>li.dropdown .dropdown-menu>li>a:focus {
+        background-color: #faebcc;
+    }
+    
+    .with-nav-tabs.panel-warning .nav-tabs>li.dropdown .dropdown-menu>.active>a,
+    .with-nav-tabs.panel-warning .nav-tabs>li.dropdown .dropdown-menu>.active>a:hover,
+    .with-nav-tabs.panel-warning .nav-tabs>li.dropdown .dropdown-menu>.active>a:focus {
+        color: #fff;
+        background-color: #8a6d3b;
+    }
+    /********************************************************************/
+    /*** PANEL DANGER ***/
+    
+    .with-nav-tabs.panel-danger .nav-tabs>li>a,
+    .with-nav-tabs.panel-danger .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-danger .nav-tabs>li>a:focus {
+        color: #a94442;
+    }
+    
+    .with-nav-tabs.panel-danger .nav-tabs>.open>a,
+    .with-nav-tabs.panel-danger .nav-tabs>.open>a:hover,
+    .with-nav-tabs.panel-danger .nav-tabs>.open>a:focus,
+    .with-nav-tabs.panel-danger .nav-tabs>li>a:hover,
+    .with-nav-tabs.panel-danger .nav-tabs>li>a:focus {
+        color: #a94442;
+        background-color: #ebccd1;
+        border-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-danger .nav-tabs>li.active>a,
+    .with-nav-tabs.panel-danger .nav-tabs>li.active>a:hover,
+    .with-nav-tabs.panel-danger .nav-tabs>li.active>a:focus {
+        color: #a94442;
+        background-color: #fff;
+        border-color: #ebccd1;
+        border-bottom-color: transparent;
+    }
+    
+    .with-nav-tabs.panel-danger .nav-tabs>li.dropdown .dropdown-menu {
+        background-color: #f2dede;
+        /* bg color */
+        border-color: #ebccd1;
+        /* border color */
+    }
+    
+    .with-nav-tabs.panel-danger .nav-tabs>li.dropdown .dropdown-menu>li>a {
+        color: #a94442;
+        /* normal text color */
+    }
+    
+    .with-nav-tabs.panel-danger .nav-tabs>li.dropdown .dropdown-menu>li>a:hover,
+    .with-nav-tabs.panel-danger .nav-tabs>li.dropdown .dropdown-menu>li>a:focus {
+        background-color: #ebccd1;
+        /* hover bg color */
+    }
+    
+    .with-nav-tabs.panel-danger .nav-tabs>li.dropdown .dropdown-menu>.active>a,
+    .with-nav-tabs.panel-danger .nav-tabs>li.dropdown .dropdown-menu>.active>a:hover,
+    .with-nav-tabs.panel-danger .nav-tabs>li.dropdown .dropdown-menu>.active>a:focus {
+        color: #fff;
+        /* active text color */
+        background-color: #a94442;
+        /* active bg color */
+    }
+    
+    .list-group-horizontal .list-group-item {
+        display: inline-block;
+    }
+    
+    .list-group-horizontal .list-group-item {
+        margin-bottom: 0;
+        margin-left: -4px;
+        margin-right: 0;
+    }
+    
+    .list-group-horizontal .list-group-item:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 4px;
+    }
+    
+    .list-group-horizontal .list-group-item:last-child {
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 0;
+    }
+    
+    .tbldoihinh {
+        color: black;
+        font-weight: 500;
+    }
+    
+    .tblachieve {
+        font-weight: 500;
+    }
+    
+    .giai {
+        color: green;
+    }
+    
+    footer {
+        margin-top: 200px;
+    }
+    
+    footer a {
+        color: white;
+    }
+    
+    #top-link-block {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    .navnews a {
+        color: #009900;
+        font-weight: bold;
+    }
+    
+    .active {
+        color: red;
+        font-weight: bold;
+    }
+    
+    .higtlightnews {
+        color: black;
+    }
+    
+    .scheduler a {
+        color: black;
+    }
+    
+    .winteam {
+        color: red;
+    }
+    
+    .loseteam {
+        color: #666666;
+    }
+    
+    .item p {
+        color: black;
+        font-size: bolder;
+    }
+    
+    a {
+        color: black;
+    }
+    
+    a:hover {
+        color: #cc0000;
+    }
+    
+    .caption {
+        display: block;
+        width: 100%;
+        background: #009900;
+        height: 55px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 55px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        box-sizing: border-box;
+    }
+    
+    .teamcaption {
+        display: block;
+        width: 739px;
+        height: 40px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 55px;
+        
+        box-sizing: border-box;
+    }
+    
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    .row.content {
+        height: 450px
+    }
+    
+    .sidenav {
+        padding-top: 20px;
+        background-color: white;
+        height: 100%;
+    }
+    
+    footer {
+        background-color: #333333;
+        color: white;
+        padding: 15px;
+    }
+    
+    @media screen and (max-width: 767px) {
+        .sidenav {
+            height: auto;
+            padding: 15px;
+        }
+        .row.content {
+            height: auto;
+        }
+    }
+    
+    #headerBar a {
+        color: white;
+        font-weight: bold;
+    }
+    
+    .carousel-inner>.item>img,
+    .carousel-inner>.item>a>img {
+        width: 70%;
+        margin: auto;
+        max-width: 70% !important;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        min-height: 200px;
+    }
+    
+    .navbardropdown {
+        background-color: #00cc00;
+    }
+    
+    .navbardropdown li a {
+        color: black !important;
+    }
+</style>
+
+<body>
+    <object style="margin-left:10px;" width="1320" height="89">
+
+<param name="movie" value="animation.swf">
+
+<embed src="animation.swf" width="1320" height="89">
+
+</embed>
+
+</object>
+    <div class="container-fluid">
+        <a href="Index.html">
+            <img src="images/bao-bong-da.png" />
+        </a>
+        <nav id="headerBar" class="navbar " style="  background-color:#009900;">
+
+            <div class="container-fluid">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand" href="Index.html"><span class="glyphicon glyphicon-home"></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">VIỆT NAM
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">V-LEAGUE</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">FUTSAL</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">GIẢI HẠNG NHẤT</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">ĐỘI TUYỂN NỮ</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ANH
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">GIẢI NGOẠI HẠNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP LIÊN ĐOÀN</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP FA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">CHAMPIONS LEAGUE
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="DanhSachBaiViet.html">TIN TỨC</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="DanhSachBaiViet.html">NHẬN ĐỊNH</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">TÂY BAN NHA
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">LA LIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP NHÀ VUA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ý
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">SERIE A</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">ĐỨC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="#">BUNDESLIGA</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">CÚP QUỐC GIA</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li><a href="#">VIDEO</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
+        <span class="caret"></span></a>
+                            <ul class="navbardropdown dropdown-menu">
+                                <li><a href="ChuyenNhuong.html">CHUYỂN NHƯỢNG</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="LichThiDau.html">LỊCH THI ĐẤU</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="BangKetQua.html">KẾT QUẢ</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
+
+            <ul class="nav navbar-nav navbar-right">
+                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            </ul>
+
+
+        </div>
+        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+        <div class="container-fluid text-center">
+            <div class="row content">
+                <div class="col-md-2 sidenav nopadding">
+
+
+
+
+                    <object width="160" height="600">
+
+<param name="movie" value="animation-side.swf">
+
+<embed src="animationside.swf" width="160" height="600">
+
+</embed>
+
+</object>
+
+                </div>
+
+                <div class="col-md-7 text-left">
+                    <div class="container-fluid">
+                        <div class="row teamcaption" style="background-color:grey;">
+                            <div class="col-xs-1 nopadding"><span class="glyphicon glyphicon-th-list" style="padding-top:10px;"></span></div>
+                            <div class="col-xs-11 nopadding">BẢNG XẾP HẠNG</div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="panel with-nav-tabs panel-default">
+                                <div class="panel-heading">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1info" data-toggle="tab">NGOẠI HẠNG ANH</a></li>
+                                        <li><a href="#tab2info" data-toggle="tab">LA LIGA</a></li>
+                                        <li><a href="#tab3info" data-toggle="tab">BUNDESLIGA</a></li>
+                                        <li><a href="#tab4info" data-toggle="tab">SERIE A</a></li>
+                                        <!--                                        <li class="dropdown">
+                                            <a href="#" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#tab4info" data-toggle="tab">Info 4</a></li>
+                                                <li><a href="#tab5info" data-toggle="tab">Info 5</a></li>
+                                            </ul>
+                                        </li>-->
+                                    </ul>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade in active" id="tab1info">
+                                            <table class="table table-condensed table-hover" style="color:black;">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-1">Hạng</th>
+                                                        <th class="col-md-2"></th>
+                                                        <th class="col-md-4">Đội</th>
+                                                        <th class="col-md-1">Trận</th>
+                                                        <th class="col-md-1">Số bàn</th>
+                                                        <th class="col-md-1" style="color:red;">Điểm</th>
+                                                        <th class="col-md-1"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <a href="DoiBong.html"><img src="fc/liverpool_30x30.png" /></a>
+                                                        </td>
+                                                        <td><a href="DoiBong.html">Liverpool</a></td>
+                                                        <td>11</td>
+                                                        <td>16</td>
+                                                        <td style="color:red;">26</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Chelsea</a></td>
+                                                        <td>11</td>
+                                                        <td>17</td>
+                                                        <td style="color:red;">25</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><img src="fc/mancity_30x30.gif" /></td>
+                                                        <td><a href="DoiBong.html">Man City</a></td>
+                                                        <td>11</td>
+                                                        <td>15</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Arsenal</a></td>
+                                                        <td>11</td>
+                                                        <td>13</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td><img src="fc/tottenham_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Tottenham</a></td>
+                                                        <td>11</td>
+                                                        <td>9</td>
+                                                        <td style="color:red;">21</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Man United</a></td>
+                                                        <td>11</td>
+                                                        <td>3</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td><img src="fc/everton_30x30.jpg" /></td>
+                                                        <td><a href="DoiBong.html">Everton</a></td>
+                                                        <td>11</td>
+                                                        <td>2</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab2info">
+                                            <table class="table table-condensed table-hover" style="color:black;">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-1">Hạng</th>
+                                                        <th class="col-md-2"></th>
+                                                        <th class="col-md-4">Đội</th>
+                                                        <th class="col-md-1">Trận</th>
+                                                        <th class="col-md-1">Số bàn</th>
+                                                        <th class="col-md-1" style="color:red;">Điểm</th>
+                                                        <th class="col-md-1"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <a href="DoiBong.html"><img src="fc/liverpool_30x30.png" /></a>
+                                                        </td>
+                                                        <td><a href="DoiBong.html">Liverpool</a></td>
+                                                        <td>11</td>
+                                                        <td>16</td>
+                                                        <td style="color:red;">26</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Chelsea</a></td>
+                                                        <td>11</td>
+                                                        <td>17</td>
+                                                        <td style="color:red;">25</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><img src="fc/mancity_30x30.gif" /></td>
+                                                        <td><a href="DoiBong.html">Man City</a></td>
+                                                        <td>11</td>
+                                                        <td>15</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Arsenal</a></td>
+                                                        <td>11</td>
+                                                        <td>13</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td><img src="fc/tottenham_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Tottenham</a></td>
+                                                        <td>11</td>
+                                                        <td>9</td>
+                                                        <td style="color:red;">21</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Man United</a></td>
+                                                        <td>11</td>
+                                                        <td>3</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td><img src="fc/everton_30x30.jpg" /></td>
+                                                        <td><a href="DoiBong.html">Everton</a></td>
+                                                        <td>11</td>
+                                                        <td>2</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab3info">
+                                            <table class="table table-condensed table-hover" style="color:black;">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-1">Hạng</th>
+                                                        <th class="col-md-2"></th>
+                                                        <th class="col-md-4">Đội</th>
+                                                        <th class="col-md-1">Trận</th>
+                                                        <th class="col-md-1">Số bàn</th>
+                                                        <th class="col-md-1" style="color:red;">Điểm</th>
+                                                        <th class="col-md-1"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <a href="DoiBong.html"><img src="fc/liverpool_30x30.png" /></a>
+                                                        </td>
+                                                        <td><a href="DoiBong.html">Liverpool</a></td>
+                                                        <td>11</td>
+                                                        <td>16</td>
+                                                        <td style="color:red;">26</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Chelsea</a></td>
+                                                        <td>11</td>
+                                                        <td>17</td>
+                                                        <td style="color:red;">25</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><img src="fc/mancity_30x30.gif" /></td>
+                                                        <td><a href="DoiBong.html">Man City</a></td>
+                                                        <td>11</td>
+                                                        <td>15</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Arsenal</a></td>
+                                                        <td>11</td>
+                                                        <td>13</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td><img src="fc/tottenham_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Tottenham</a></td>
+                                                        <td>11</td>
+                                                        <td>9</td>
+                                                        <td style="color:red;">21</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Man United</a></td>
+                                                        <td>11</td>
+                                                        <td>3</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td><img src="fc/everton_30x30.jpg" /></td>
+                                                        <td><a href="DoiBong.html">Everton</a></td>
+                                                        <td>11</td>
+                                                        <td>2</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab4info">
+                                            <table class="table table-condensed table-hover" style="color:black;">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="col-md-1">Hạng</th>
+                                                        <th class="col-md-2"></th>
+                                                        <th class="col-md-4">Đội</th>
+                                                        <th class="col-md-1">Trận</th>
+                                                        <th class="col-md-1">Số bàn</th>
+                                                        <th class="col-md-1" style="color:red;">Điểm</th>
+                                                        <th class="col-md-1"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <a href="DoiBong.html"><img src="fc/liverpool_30x30.png" /></a>
+                                                        </td>
+                                                        <td><a href="DoiBong.html">Liverpool</a></td>
+                                                        <td>11</td>
+                                                        <td>16</td>
+                                                        <td style="color:red;">26</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Chelsea</a></td>
+                                                        <td>11</td>
+                                                        <td>17</td>
+                                                        <td style="color:red;">25</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td><img src="fc/mancity_30x30.gif" /></td>
+                                                        <td><a href="DoiBong.html">Man City</a></td>
+                                                        <td>11</td>
+                                                        <td>15</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Arsenal</a></td>
+                                                        <td>11</td>
+                                                        <td>13</td>
+                                                        <td style="color:red;">24</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td><img src="fc/tottenham_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Tottenham</a></td>
+                                                        <td>11</td>
+                                                        <td>9</td>
+                                                        <td style="color:red;">21</td>
+                                                        <td><span style="color:red;" class="glyphicon glyphicon-arrow-down"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /></td>
+                                                        <td><a href="DoiBong.html">Man United</a></td>
+                                                        <td>11</td>
+                                                        <td>3</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td><img src="fc/everton_30x30.jpg" /></td>
+                                                        <td><a href="DoiBong.html">Everton</a></td>
+                                                        <td>11</td>
+                                                        <td>2</td>
+                                                        <td style="color:red;">18</td>
+                                                        <td><span style="color:green;" class="glyphicon glyphicon-arrow-up"></span></td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--<div class="tab-pane fade" id="tab5info">Info 5</div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-md-3 sidenav nopadding">
+
+
+
+                    <div class="container=fluid">
+
+
+
+                        
+                        <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">GIẢI BÓNG HÀNG ĐẦU</p></a>
+
+
+                        </div>
+                        <ul class="list-group text-left">
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/68.png" /> NGOẠI HẠNG ANH</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/7.png" /> CHAMPIONS LEAGUE</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/176.png" /> LA LIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/80.png" /> BUNDESLIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/100.png" /> SERIE A</a>
+                            </li>
+                        </ul>
+
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="container-fluid">
+
+                            <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
+
+
+                            </div>
+                            <ul class="list-group">
+                                <li class="list-group-item"><a href="#">HLV Ventura xoay vòng hàng công ở trận Italia vs Tây Ban Nha</a> <span class="badge">12</span></li>
+                                <li class="list-group-item"><a href="#">Cận cảnh buổi tập đầu tiên của ĐT Anh cùng HLV Southgate</a> <span class="badge">5</span></li>
+                                <li class="list-group-item"><a href="#">Verratti vắng mặt ở trận gặp TBN: Khi người Ý thận trọng</a> <span class="badge">3</span></li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+            <span id="top-link-block" style="">
+    <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
+        <i class="glyphicon glyphicon-chevron-up"></i> Đầu trang
+    </a>
+</span>
+            <!-- /top-link-block -->
+
+
+
+
+        </div>
+
+        <footer class="container-fluid ">
+            <div class="row-content">
+                <div class="col-md-5">
+                    <p><span class="glyphicon glyphicon-th"></span> Môn học: Giao tiếp người máy</p>
+                    <p><span class="glyphicon glyphicon-cog"></span> Mã lớp: SE215.H11</p>
+                    <p><span class="glyphicon glyphicon-link"></span> Nhóm : 05</p>
+                </div>
+                <div class="col-md-4">
+                    <p><span class="glyphicon glyphicon-list"></span> Danh sách thành viên:</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Văn Trương Quốc Thắng 13520776</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Nguyễn Quang Nghĩa 13520540</p>
+                    <p><span class="glyphicon glyphicon-tag"></span> Trương Ngọc Sơn 13520715</p>
+
+                </div>
+                <div class="col-md-3">
+                    <img src="images/Web-logo.png" />
+                </div>
+            </div>
+
+        </footer>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img class="img-circle" id="img_logo" src="img/Football.ico">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+                </div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Nhập thông tin tài khoản</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Nhớ mật khẩu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Type your e-mail.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register an account.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+    </div>
+</html>
+<script>
+    $(function() {
+        $('#datetimepicker1').datetimepicker();
+    });
+
+    function btnCloseClick() {
+        $("#myModal").html("");
+    }
+
+</script>
+
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>

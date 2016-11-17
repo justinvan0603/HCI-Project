@@ -7,13 +7,154 @@
 
     <link href="./css/bootstrap.css" rel="stylesheet">
 
-    <title>Trang chủ</title>
+    <title>Hòa hú vía West Brom, Tottenham lỡ cơ hội lên đầu bảng</title>
 </head>
 
 <style>
-    footer a{
+    #type {
+        font-size: 12px;
+        font-weight: 100;
+    }
+    #login-modal .modal-dialog {
+        width: 350px;
+    }
+    
+    #login-modal input[type=text],
+    input[type=password] {
+        margin-top: 10px;
+    }
+    
+    #div-login-msg,
+    #div-lost-msg,
+    #div-register-msg {
+        border: 1px solid #dadfe1;
+        height: 30px;
+        line-height: 28px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #div-login-msg.success,
+    #div-lost-msg.success,
+    #div-register-msg.success {
+        border: 1px solid #68c3a3;
+        background-color: #c8f7c5;
+    }
+    
+    #div-login-msg.error,
+    #div-lost-msg.error,
+    #div-register-msg.error {
+        border: 1px solid #eb575b;
+        background-color: #ffcad1;
+    }
+    
+    #icon-login-msg,
+    #icon-lost-msg,
+    #icon-register-msg {
+        width: 30px;
+        float: left;
+        line-height: 28px;
+        text-align: center;
+        background-color: #dadfe1;
+        margin-right: 5px;
+        transition: all ease-in-out 500ms;
+    }
+    
+    #icon-login-msg.success,
+    #icon-lost-msg.success,
+    #icon-register-msg.success {
+        background-color: #68c3a3 !important;
+    }
+    
+    #icon-login-msg.error,
+    #icon-lost-msg.error,
+    #icon-register-msg.error {
+        background-color: #eb575b !important;
+    }
+    
+    #img_logo {
+        max-height: 100px;
+        max-width: 100px;
+    }
+    /* #########################################
+   #    override the bootstrap configs     #
+   ######################################### */
+    
+    .modal-backdrop.in {
+        filter: alpha(opacity=50);
+        opacity: .8;
+    }
+    
+    .modal-content {
+        background-color: #ececec;
+        border: 1px solid #bdc3c7;
+        border-radius: 0px;
+        outline: 0;
+    }
+    
+    .modal-header {
+        min-height: 16.43px;
+        padding: 15px 15px 15px 15px;
+        border-bottom: 0px;
+    }
+    
+    .modal-body {
+        position: relative;
+        padding: 5px 15px 5px 15px;
+    }
+    
+    .modal-footer {
+        padding: 15px 15px 15px 15px;
+        text-align: left;
+        border-top: 0px;
+    }
+    
+    .checkbox {
+        margin-bottom: 0px;
+    }
+    
+    .btn {
+        border-radius: 0px;
+    }
+    
+    .btn:focus,
+    .btn:active:focus,
+    .btn.active:focus,
+    .btn.focus,
+    .btn:active.focus,
+    .btn.active.focus {
+        outline: none;
+    }
+    
+    .btn-lg,
+    .btn-group-lg>.btn {
+        border-radius: 0px;
+    }
+    
+    .btn-link {
+        padding: 5px 10px 0px 0px;
+        color: #95a5a6;
+    }
+    
+    .btn-link:hover,
+    .btn-link:focus {
+        color: #2c3e50;
+        text-decoration: none;
+    }
+    
+    .glyphicon {
+        top: 0px;
+    }
+    
+    .form-control {
+        border-radius: 0px;
+    }
+    .hastaglink {
+        color: white !important;
+    }
+    footer a {
         color: white;
     }
+    
     .list-group-horizontal .list-group-item {
         display: inline-block;
     }
@@ -118,7 +259,7 @@
         color: #fff;
         font-size: 20px;
         line-height: 55px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+        
         box-sizing: border-box;
     }
     
@@ -155,6 +296,9 @@
         }
         .row.content {
             height: auto;
+        }
+        #type {
+            font-size: 12px;
         }
     }
     
@@ -204,7 +348,7 @@
             <div class="container-fluid">
                 <div class="navbar-header">
 
-                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+                    <a class="navbar-brand" href="Index.html"><span class="glyphicon glyphicon-home"></span></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
@@ -212,24 +356,24 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">VIỆT NAM
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                                <li><a href="#">V-LEAGUE</a></li>
+                                <li><a href="DanhSachBaiViet.html">V-LEAGUE</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">FUTSAL</a></li>
+                                <li><a href="DanhSachBaiViet.html">FUTSAL</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">GIẢI HẠNG NHẤT</a></li>
+                                <li><a href="DanhSachBaiViet.html">GIẢI HẠNG NHẤT</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">ĐỘI TUYỂN NỮ</a></li>
+                                <li><a href="DanhSachBaiViet.html">ĐỘI TUYỂN NỮ</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">ANH
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                                <li><a href="#">GIẢI NGOẠI HẠNG</a></li>
+                                <li><a href="DanhSachBaiViet.html">GIẢI NGOẠI HẠNG</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">CÚP LIÊN ĐOÀN</a></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP LIÊN ĐOÀN</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">CÚP FA</a></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP FA</a></li>
 
                             </ul>
                         </li>
@@ -237,9 +381,9 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">CHAMPIONS LEAGUE
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                                <li><a href="#">LỊCH THI ĐẤU-KẾT QUẢ</a></li>
+                                <li><a href="DanhSachBaiViet.html">TIN TỨC</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">TIN TỨC</a></li>
+                                <li><a href="DanhSachBaiViet.html">NHẬN ĐỊNH</a></li>
 
                             </ul>
                         </li>
@@ -247,9 +391,9 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">TÂY BAN NHA
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                                <li><a href="#">LA LIGA</a></li>
+                                <li><a href="DanhSachBaiViet.html">LA LIGA</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">CÚP NHÀ VUA</a></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP NHÀ VUA</a></li>
 
                             </ul>
                         </li>
@@ -257,9 +401,9 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ý
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                                <li><a href="#">SERIE A</a></li>
+                                <li><a href="DanhSachBaiViet.html">SERIE A</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">CÚP QUỐC GIA</a></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP QUỐC GIA</a></li>
 
                             </ul>
                         </li>
@@ -267,41 +411,64 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">ĐỨC
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                                <li><a href="#">BUNDESLIGA</a></li>
+                                <li><a href="DanhSachBaiViet.html">BUNDESLIGA</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">CÚP QUỐC GIA</a></li>
+                                <li><a href="DanhSachBaiViet.html">CÚP QUỐC GIA</a></li>
 
                             </ul>
                         </li>
 
-                        <li><a href="#">VIDEO</a></li>
+                        <li><a href="Video.html">VIDEO</a></li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                                <li><a href="#">CHUYỂN NHƯỢNG</a></li>
+                                <li><a href="ChuyenNhuong.html">CHUYỂN NHƯỢNG</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">ĐỘI BÓNG</a></li>
+                                <li><a href="LichThiDau.html">LỊCH THI ĐẤU</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">CẦU THỦ</a></li>
+                                <li><a href="BangKetQua.html">KẾT QUẢ</a></li>
 
                             </ul>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" style="height:1px;">
 
-            <ul class="nav navbar-nav navbar-right">
-                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            <div class="text-left" style="float:left; height:8px; margin-top:8px;">
+                <ol class="breadcrumb">
+                    <li><a href="Index.html">Trang chủ</a></li>
+                    <li><a href="DanhSachBaiViet.html">Giải ngoại hạng Anh</a></li>
+                    <li><a href="ChiTietBaiViet.html"><strong>Bài viết</strong></a></li>
+                </ol>
+                
+            </div>
+            <div style="float:left;margin-top:18px; margin-left:30px; height:5px;"><p id="type" ></p></div>
+            
+
+            <ul class="nav navbar-nav navbar-right" style="float:right;">
+
+                <li>
+                    <form class="navbar-form form-inline" role="search">
+                        <div class="input-group" style="float:left;">
+                            <input style="width:200px;" type="text" class="form-control input-sm" placeholder="Nhập nội dung tìm kiếm" name="q">
+
+                        </div>
+                        <div class="input-group-btn" style="float:left;">
+                            <button class="btn btn-default btn-md" style="height:30px;" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </form>
+                </li>
             </ul>
 
 
         </div>
+        <div class="clearfix"></div>
         <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
         <div class="container-fluid text-center">
             <div class="row content">
@@ -310,7 +477,7 @@
 
 
 
-                    <object width="160" height="600">
+                    <object width="218" height="600">
 
 <param name="movie" value="animation-side.swf">
 
@@ -326,116 +493,134 @@
 
 
 
-                    <div class="container-fluid" >
+                    <div class="container-fluid">
 
                         <div class="row">
-                            <h3>Hòa hú vía West Brom, Tottenham lỡ cơ hội lên đầu bảng</h3>
+                            <h3>Costa và Hazard tỏa sáng, Chelsea nhấn chìm Leicester</h3>
+                            
                             <div class="row">
                                 <div class="container-fluid">
-                                    <p><strong>MINH LÂM</strong>-<span>07:06 ngày 16-10-2016</span></p> 
+                                    
+                                    <p><strong>MINH LÂM</strong>-<span>07:06 ngày 16-10-2016</span></p>
                                     <hr style="height:1px;"></hr>
+                                <a href="#"><img src="img/share_fb.png"/></a>
+                                <a href="#"><img src="img/share_google.png"/></a>
                                 </div>
                             
+
                             </div>
-                        <div class="row">
-                            <div  class="container-fluid">
-                                <p><strong style="color:grey;">TIN LIÊN QUAN:</strong></p>
-                            <ul>
-                                <li><a href="#"><strong>Hai lần hỏng 11m, Man City ngậm ngùi chia điểm Everton</strong></a></li>
-                                <li><a href="#"><strong>Hạ sát Swansea, Arsenal bắt kịp Man City trên ngôi đầu</strong></a></li>
-                                <li><a href="#"><strong>Costa và Hazard tỏa sáng, Chelsea nhấn chìm Leicester</strong></a></li>
-                                </ul>
+                            <div class="row">
+                                <div class="container-fluid">
+                                    
+                                    <p><strong style="color:red;">TIN LIÊN QUAN:</strong></p>
+                                    <ul>
+                                        <li><a href="ChiTietBaiViet.html"><strong>Hai lần hỏng 11m, Man City ngậm ngùi chia điểm Everton</strong></a></li>
+                                        <li><a href="ChiTietBaiViet.html"><strong>Hạ sát Swansea, Arsenal bắt kịp Man City trên ngôi đầu</strong></a></li>
+                                        <li><a href="ChiTietBaiViet.html"><strong>Costa và Hazard tỏa sáng, Chelsea nhấn chìm Leicester</strong></a></li>
+                                        
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="shortdescription container-fluid">
-                                <p style="color:#4d4d4d;"><strong>
-                                Màn trình diễn xuất sắc của Eden Hazard cùng Diego Costa đã giúp Chelsea đã nhấn chìm Leicester với tỉ số 3-0 tại Stamford Bridge ở vòng 8 Ngoại hạng Anh 2016/17.</strong></p>
+                            <div class="row">
+                                <div class="shortdescription container-fluid">
+                                    <p style="color:#4d4d4d;"><strong>
+                                (Tinbongda.vn) - Màn trình diễn xuất sắc của Eden Hazard cùng Diego Costa đã giúp Chelsea đã nhấn chìm Leicester với tỉ số 3-0 tại Stamford Bridge ở vòng 8 Ngoại hạng Anh 2016/17.</strong></p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            
-                            <article>
-                                <p class="text-center"><img src="images/chelsea2.jpg"/></p>
-                                <div class="content" style="margin-left:50px; margin-right:30px;">
-                                <p><strong>Ghi bàn:</strong></p>
-                                    <p><strong>Chelsea: </strong><span>Costa (7'), Hazard (33'), Moses (80')</span></p>
-                                    <p>Tiếp đón Leicester trên sân nhà, Chelsea chủ động tạo sức ép ngay sau tiếng còi khai cuộc. The Blues đẩy nhà ĐKVĐ phải lùi sâu phòng ngự bên phần sân nhà với những pha uy hiếp nguy hiểm từ hai cánh nhờ sự cơ động của bộ đôi Victor Moses cùng Eden Hazard.</p>
-                                    <p>Ngay phút thứ 7, Chelsea đã có điều mình cần là bàn thắng. Xuất phát từ quả đá phạt góc bên cánh phải của Hazard, Diego Costa trong tư thế không bị ai kèm tung cú sút uy lực bằng chân trái tung lưới Leicester.</p>
-                                <p class="text-center"><img src="images/chelsea1.jpg"/></p>
-                                <p class="text-center"><i>Costa là người mở điểm cho Chelsea ngay phút thứ 7</i></p>
-                                <p class="text-center"><img src="images/costa5.jpg"/></p>
-                                <p class="text-center"><i>Costa dành tặng bàn thắng cho mẹ của đồng đội Willian, người vừa qua đời tuần trước
+                            <div class="row" style="margin-left:-48px;">
+
+                                <article>
+                                    <p class="text-center"><img src="images/chelsea2.jpg" /></p>
+                                    <div class="content" style="margin-left:50px; margin-right:30px;">
+                                        <p><strong>Ghi bàn:</strong></p>
+                                        <p><strong>Chelsea: </strong><span>Costa (7'), Hazard (33'), Moses (80')</span></p>
+                                        <p>Tiếp đón Leicester trên sân nhà, Chelsea chủ động tạo sức ép ngay sau tiếng còi khai cuộc. The Blues đẩy nhà ĐKVĐ phải lùi sâu phòng ngự bên phần sân nhà với những pha uy hiếp nguy hiểm từ hai cánh nhờ sự cơ động của bộ đôi Victor Moses cùng Eden Hazard.</p>
+                                        <p>Ngay phút thứ 7, Chelsea đã có điều mình cần là bàn thắng. Xuất phát từ quả đá phạt góc bên cánh phải của Hazard, Diego Costa trong tư thế không bị ai kèm tung cú sút uy lực bằng chân trái tung lưới Leicester.</p>
+                                        <p class="text-center"><img src="images/chelsea1.jpg" /></p>
+                                        <p class="text-center"><i><strong>Costa là người mở điểm cho Chelsea ngay phút thứ 7</strong></i></p>
+                                        <p class="text-center"><img src="images/costa5.jpg" /></p>
+                                        <p class="text-center"><i><strong>Costa dành tặng bàn thắng cho mẹ của đồng đội Willian, người vừa qua đời tuần trước</strong>
                                             </i></p>
-                                <p>Có bàn thắng sớm, Chelsea thi đấu càng tự tin và nắm giữ hoàn toàn quyền kiểm soát thế trận. Sức ép của Chelsea khiến Leicester gần như không tạo ra được bất kì tình huống phản kháng nào. Đánh mất thế trận vào tay đối thủ, việc "Bầy Cáo" phải nhận thêm bàn thua cũng là điều dễ hiểu. </p>
-                                    <p>Phút 33, tận dụng sự lóng ngóng của hậu vệ Hernandez, bóng đến chân Hazard và tiền vệ này bứt tốc nhanh, lừa qua cả thủ thành Schmeichel rồi sút tung lưới Leicester. Đáng chú ý, đây mới là pha lập công thứ 3 của ngôi sao người Bỉ ở Ngoại hạng Anh 2016/17.</p>
-                                    <p class="text-center"><img src="images/chelsea3.jpg"/></p>
-                                    <p class="text-center"><i>Hazard lừa bóng qua thủ thành Schmeichel trước khi sút tung lưới Leicester</i></p>
-                                    <p>Bước sang hiệp 2, Chelsea chơi chậm và chủ động nhường lại thế trận cho Leicester. Dù vậy, đây cũng là lúc đoàn quân của Antonio Conte sử dụng chiến thuật phòng ngự phản công lợi hại.</p>
-                                    <p>Không ít lần khung thành của Leicester bị đặt trong tình trạng báo động với những pha thoát xuống dứt điểm của Moses hay Kante. Và tới phút 80, Chelsea đã có bàn thắng thứ 3 nhờ công của Victor Moses. Ở tình huống này, tuyển thủ người Nigeria và tiền vệ trẻ Nathaniel Chalobah đã có pha phối hợp đập nhả cực kì đẹp mắt.</p>
-                                    <p>Trong quãng thời gian còn lại, Leicester dù chơi đầy nỗ lực nhưng cũng không thể tìm kiếm được dù chỉ 1 bàn danh dự, qua đó đành chấp nhận thua tan nát 0-3 tại Stamford Bridge.</p>
-                                    <p>Với kết quả này, Chelsea đã có chiến thắng thứ 2 liên tiếp và tạm leo lên vị trí thứ 5. Trong khi đó, Leicester tiếp tục lún sâu vào khủng hoảng với mạch 3 trận liền không biết mùi chiến thắng tại Ngoại hạng Anh 2016/17 (2 thua, 1 hòa).</p>
-                                    <p><strong>Đội hình ra sân:</strong></p>
-                                    <p><strong>Chelsea:</strong> <span>Courtois; Azpilicueta, David Luiz, Cahill, Moses (Aina 81'), Kante, Matic, Alonso, Pedro (Chalobah 68'), Diego Costa, Hazard (Loftus-Cheek 81')</span></p>
-                                    <p><strong>Leicester:</strong><span>Schmeichel, Hernandez, Huth, Morgan, Fuchs, Albrighton (King 73'), Drinkwater, Amartey, Schlupp (Mahrez 67'), Musa (Slimani 67'), Vardy.</span></p>
-                                </div>
-                                
-                                
-                            </article>
-                        </div>
+                                        <p>Có bàn thắng sớm, Chelsea thi đấu càng tự tin và nắm giữ hoàn toàn quyền kiểm soát thế trận. Sức ép của Chelsea khiến Leicester gần như không tạo ra được bất kì tình huống phản kháng nào. Đánh mất thế trận vào tay đối thủ, việc "Bầy Cáo" phải nhận thêm bàn thua cũng là điều dễ hiểu. </p>
+                                        <p>Phút 33, tận dụng sự lóng ngóng của hậu vệ Hernandez, bóng đến chân Hazard và tiền vệ này bứt tốc nhanh, lừa qua cả thủ thành Schmeichel rồi sút tung lưới Leicester. Đáng chú ý, đây mới là pha lập công thứ 3 của ngôi sao người Bỉ ở Ngoại hạng Anh 2016/17.</p>
+                                        <p class="text-center"><img src="images/chelsea3.jpg" /></p>
+                                        <p class="text-center"><i><strong>Hazard lừa bóng qua thủ thành Schmeichel trước khi sút tung lưới Leicester</strong></i></p>
+                                        <p>Bước sang hiệp 2, Chelsea chơi chậm và chủ động nhường lại thế trận cho Leicester. Dù vậy, đây cũng là lúc đoàn quân của Antonio Conte sử dụng chiến thuật phòng ngự phản công lợi hại.</p>
+                                        <p>Không ít lần khung thành của Leicester bị đặt trong tình trạng báo động với những pha thoát xuống dứt điểm của Moses hay Kante. Và tới phút 80, Chelsea đã có bàn thắng thứ 3 nhờ công của Victor Moses. Ở tình huống này, tuyển thủ người Nigeria và tiền vệ trẻ Nathaniel Chalobah đã có pha phối hợp đập nhả cực kì đẹp mắt.</p>
+                                        <p>Trong quãng thời gian còn lại, Leicester dù chơi đầy nỗ lực nhưng cũng không thể tìm kiếm được dù chỉ 1 bàn danh dự, qua đó đành chấp nhận thua tan nát 0-3 tại Stamford Bridge.</p>
+                                        <p>Với kết quả này, Chelsea đã có chiến thắng thứ 2 liên tiếp và tạm leo lên vị trí thứ 5. Trong khi đó, Leicester tiếp tục lún sâu vào khủng hoảng với mạch 3 trận liền không biết mùi chiến thắng tại Ngoại hạng Anh 2016/17 (2 thua, 1 hòa).</p>
+                                        <p><strong>Đội hình ra sân:</strong></p>
+                                        <p><strong>Chelsea:</strong> <span>Courtois; Azpilicueta, David Luiz, Cahill, Moses (Aina 81'), Kante, Matic, Alonso, Pedro (Chalobah 68'), Diego Costa, Hazard (Loftus-Cheek 81')</span></p>
+                                        <p><strong>Leicester:</strong><span>Schmeichel, Hernandez, Huth, Morgan, Fuchs, Albrighton (King 73'), Drinkwater, Amartey, Schlupp (Mahrez 67'), Musa (Slimani 67'), Vardy.</span></p>
+                                        <h5><span class="label label-primary"><a class="hastaglink" href="#">Chelsea</a></span>
+                                        <span class="label label-primary"><a class="hastaglink" href="#">Diege Costa</a></span>
+                                        <span class="label label-primary"><a class="hastaglink" href="#">Hazard</a></span>
+                                            <span class="label label-primary"><a class="hastaglink" href="#">Leicester</a></span>
+                                    </h5>
+                                    </div>
+
+
+                                </article>
                             </div>
-                    <hr style="height:1px;"></hr>
-                    <p class="text-right">Nguồn: <strong>TINTUCBONGDA</strong></p>
-                                <div class="container=fluid">
-                        <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-bullhorn"></span> BÌNH LUẬN MỚI </p></a>
+                        </div>
+                        <hr style="height:1px;"></hr>
+                        <p class="text-right">Nguồn: <strong>TINTUCBONGDA</strong></p>
 
+                        <div class="container=fluid">
+                            <div class="form-group">
+                                <label for="comment">Bình luận của bạn:</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                                <button style="margin-top:5px;" type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok-circle"></span> Gửi</button>
+                            </div>
+                            <div class="caption"><a class="tableheader" href="#"><span class="glyphicon glyphicon-bullhorn"></span> BÌNH LUẬN MỚI </p></a>
+
+
+                            </div>
+
+                            <table class="scheduler table table-striped table-condensed table-hover">
+                                <thead>
+
+
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">Người dùng 1</h4>
+                                                <p>Costa đã trở lại và lợi hại hơn xưa</p>
+                                            </div>
+                                        </div>
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">Người dùng 2</h4>
+                                                <p>Chelsea đã trở lại</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <img src="images/img_avatar1.png" class="media-object" style="width:60px">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="media-heading">Người dùng 3</h4>
+                                                <p>This is a comment</p>
+                                            </div>
+                                        </div>
+
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
 
                         </div>
-
-                        <table class="scheduler table table-striped table-condensed table-hover">
-                            <thead>
-
-
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Người dùng 1</h4>
-                                            <p>This is a comment</p>
-                                        </div>
-                                    </div>
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Người dùng 2</h4>
-                                            <p>This is a comment</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="media">
-                                        <div class="media-left">
-                                            <img src="images/img_avatar1.png" class="media-object" style="width:60px">
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading">Người dùng 3</h4>
-                                            <p>This is a comment</p>
-                                        </div>
-                                    </div>
-
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
                     </div>
 
                 </div>
@@ -449,17 +634,36 @@
 
 
 
-                    <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                    <div class="container-fluid" style="margin-top:75px;">
+                   
+                    <div class="container-fluid" >
 
                         <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
 
 
                         </div>
                         <ul class="list-group">
-                            <li class="list-group-item"><a href="#">HLV Ventura xoay vòng hàng công ở trận Italia vs Tây Ban Nha</a> <span class="badge">12</span></li>
-                            <li class="list-group-item"><a href="#">Cận cảnh buổi tập đầu tiên của ĐT Anh cùng HLV Southgate</a> <span class="badge">5</span></li>
-                            <li class="list-group-item"><a href="#">Verratti vắng mặt ở trận gặp TBN: Khi người Ý thận trọng</a> <span class="badge">3</span></li>
+                            <li class="list-group-item"><a href="ChiTietBaiViet.html">HLV Ventura xoay vòng hàng công ở trận Italia vs Tây Ban Nha</a> <span class="badge">12</span></li>
+                            <li class="list-group-item"><a href="ChiTietBaiViet.html">Cận cảnh buổi tập đầu tiên của ĐT Anh cùng HLV Southgate</a> <span class="badge">5</span></li>
+                            <li class="list-group-item"><a href="ChiTietBaiViet.html">Verratti vắng mặt ở trận gặp TBN: Khi người Ý thận trọng</a> <span class="badge">3</span></li>
+                        </ul>
+
+
+                    </div>
+<hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                    <div class="container-fluid" style="margin-top:75px;">
+
+                        <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-play-circle"></span> VIDEO</p></a>
+
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                            <iframe width="270" height="150" src="https://www.youtube.com/embed/M7VToncUD20" frameborder="0" allowfullscreen></iframe>
+                                <a href="#">Chelsea vs Leicester Highlights </a>
+                            </li>
+                            <li class="list-group-item"><iframe width="270" height="150" src="https://www.youtube.com/embed/Uq91KfjtLvI" frameborder="0" allowfullscreen></iframe><a href="#">Bình luận sau trận Chelsea vs Leicester City</a></li>
+                            <li class="list-group-item"><iframe width="270" height="150" src="https://www.youtube.com/embed/JTbQkuY6RW4" frameborder="0" allowfullscreen></iframe><a href="#">Chelsea vs Leicester City | Dự đoán tỷ số</a></li>
+                            
                         </ul>
 
 
@@ -475,7 +679,7 @@
 
         <span id="top-link-block" style="">
     <a href="#top" class="well well-sm"  onclick="$('html,body').animate({scrollTop:0},'slow');return false;">
-        <i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+        <i class="glyphicon glyphicon-chevron-up"></i> Đầu trang
     </a>
 </span>
         <!-- /top-link-block -->
@@ -503,7 +707,96 @@
         </footer>
 
     </div>
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img class="img-circle" id="img_logo" src="img/Football.ico">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+					</button>
+                </div>
 
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Nhập thông tin tài khoản</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Nhớ mật khẩu
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Type your e-mail.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register an account.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+    </div>
     
 
 </html>
@@ -516,3 +809,47 @@
 
 <script src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+    $.fn.typer = function(text, options){
+    options = $.extend({}, {
+        char: ' ',
+        delay: 2200,
+        duration: 600,
+        endless: true
+    }, options || text);
+
+    text = $.isPlainObject(text) ? options.text : text;
+
+    var elem = $(this),
+        isTag = false,
+        c = 0;
+    
+    (function typetext(i) {
+        var e = ({string:1, number:1}[typeof text] ? text : text[i]) + options.char,
+            char = e.substr(c++, 1);
+
+        if( char === '<' ){ isTag = true; }
+        if( char === '>' ){ isTag = false; }
+        elem.html(e.substr(0, c));
+        if(c <= e.length){
+            if( isTag ){
+                typetext(i);
+            } else {
+                setTimeout(typetext, options.duration/10, i);
+            }
+        } else {
+            c = 0;
+            i++;
+            
+            if (i === text.length && !options.endless) {
+                return;
+            } else if (i === text.length) {
+                i = 0;
+            }
+            setTimeout(typetext, options.delay, i);
+        }
+    })(0);
+};
+
+            $('#type').typer(['<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Đón xem trận đấu cực hot Arsenal gặp Manchester United ngày 19/11</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Liverpool đang tạm thời dẫn đầu giải ngoại hạng Anh</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Sau 11 vòng Arsenal về lại vị trí thứ 4 huyền thoại</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Real Marid vươn lên đầu bảng với 27 điểm</b>' ]);
+</script>
