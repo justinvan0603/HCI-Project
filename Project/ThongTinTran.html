@@ -285,6 +285,9 @@
         .row.content {
             height: auto;
         }
+        #type {
+            font-size: 12px;
+        }
     }
     
     #headerBar a {
@@ -418,17 +421,29 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" style="height:20px;">
+            <iframe style="height:20px; margin-top:10px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            <strong style="margin-left:-88px;" id="type"></strong>
+            <ul class="nav navbar-nav navbar-right" style="height:20px; color:black; font-size:bolder;">
+                <li>
+                    <form class="navbar-form form-inline" role="search">
+                        <div class="input-group" style="float:left;">
+                            <input style="width:200px;" type="text" class="form-control input-sm" placeholder="Nhập nội dung tìm kiếm" name="q">
 
-            <ul class="nav navbar-nav navbar-right">
-                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+                        </div>
+                        <div class="input-group-btn" style="float:left;">
+                            <button class="btn btn-default btn-md" style="height:30px;" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+                <li><a style="color:green;" class="text-center"><strong>Thứ ba, 15-11-2016</strong> <span class="glyphicon glyphicon-calendar"></span></a></li>
+
             </ul>
-
 
         </div>
         <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
@@ -439,7 +454,7 @@
 
 
 
-                    <object width="160" height="600">
+                    <object width="218" height="600">
 
 <param name="movie" value="animation-side.swf">
 
@@ -454,7 +469,7 @@
                 <div class="col-md-7 text-left">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="row teamcaption" style="background-color:grey;">
+                            <div class="row teamcaption" style="background-color:#009900; margin-left:0px;">
                                 <div class="col-xs-1 nopadding"><img src="images/68.png" style="margin-left:5px; margin-top:17px;" /></div>
                                 <div class="col-xs-11 nopadding">NGOẠI HẠNG ANH</div>
                             </div>
@@ -490,11 +505,11 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">THÀNH TÍCH ĐỐI ĐẦU</div>
+                            <div class="panel panel-default" style="margin-top:16px;">
+                                <div class="panel-heading"><strong>THÀNH TÍCH ĐỐI ĐẦU</strong></div>
                                 <div class="panel-body">
                                     <table class="tblachieve table table-condensed" style="color:black;">
-                                        <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                        <thead class="text-center" style="font-weight:bold; background: #009900; color:#fff;">
                                             <tr>
                                                 <th>Ngày</th>
                                                 <th>Giải đấu</th>
@@ -554,24 +569,24 @@
                         </div>
                         <ul class="list-group text-left">
                             <li class="list-group-item">
-                                <a href="#"><img src="images/68.png" /> NGOẠI HẠNG ANH</a>
+                                <a href="DanhSachBaiViet.html"><img src="images/68.png" /> NGOẠI HẠNG ANH</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/7.png" /> CHAMPIONS LEAGUE</a>
+                                <a href="DanhSachBaiViet.html"><img src="images/7.png" /> CHAMPIONS LEAGUE</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/176.png" /> LA LIGA</a>
+                                <a href="DanhSachBaiViet.html"><img src="images/176.png" /> LA LIGA</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/80.png" /> BUNDESLIGA</a>
+                                <a href="DanhSachBaiViet.html"><img src="images/80.png" /> BUNDESLIGA</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#"><img src="images/100.png" /> SERIE A</a>
+                                <a href="DanhSachBaiViet.html"><img src="images/100.png" /> SERIE A</a>
                             </li>
                         </ul>
 
                         <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                        <div class="container-fluid">
+                        <div class="container-fluid" style="margin-left:-15px; width:360px;">
 
                             <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
 
@@ -671,17 +686,17 @@
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
+                                <span id="text-lost-msg">Nhập Email</span>
                             </div>
-                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                            <input id="lost_email" class="form-control" type="text" placeholder="Nhập Email" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Gửi</button>
                             </div>
                             <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Đăng ký</button>
                             </div>
                         </div>
                     </form>
@@ -692,19 +707,19 @@
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register an account.</span>
+                                <span id="text-register-msg">Tạo tài khoản</span>
                             </div>
-                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="register_username" class="form-control" type="text" placeholder="Nhập Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="Nhập Email" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Mật khẩu" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng ký</button>
                             </div>
                             <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
                             </div>
                         </div>
                     </form>
@@ -729,3 +744,147 @@
 
 <script src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+    $(function() {
+    
+    var $formLogin = $('#login-form');
+    var $formLost = $('#lost-form');
+    var $formRegister = $('#register-form');
+    var $divForms = $('#div-forms');
+    var $modalAnimateTime = 300;
+    var $msgAnimateTime = 150;
+    var $msgShowTime = 2000;
+
+    $("form").submit(function () {
+        switch(this.id) {
+            case "login-form":
+                var $lg_username=$('#login_username').val();
+                var $lg_password=$('#login_password').val();
+                if ($lg_username == "ERROR") {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
+                } else {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+                }
+                return false;
+                break;
+            case "lost-form":
+                var $ls_email=$('#lost_email').val();
+                if ($ls_email == "ERROR") {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
+                } else {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
+                }
+                return false;
+                break;
+            case "register-form":
+                var $rg_username=$('#register_username').val();
+                var $rg_email=$('#register_email').val();
+                var $rg_password=$('#register_password').val();
+                if ($rg_username == "ERROR") {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
+                } else {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
+                }
+                return false;
+                break;
+            default:
+                return false;
+        }
+        return false;
+    });
+    
+    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
+    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
+    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
+    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
+    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
+    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
+    
+    function modalAnimate ($oldForm, $newForm) {
+        var $oldH = $oldForm.height();
+        var $newH = $newForm.height();
+        $divForms.css("height",$oldH);
+        $oldForm.fadeToggle($modalAnimateTime, function(){
+            $divForms.animate({height: $newH}, $modalAnimateTime, function(){
+                $newForm.fadeToggle($modalAnimateTime);
+            });
+        });
+    }
+    
+    function msgFade ($msgId, $msgText) {
+        $msgId.fadeOut($msgAnimateTime, function() {
+            $(this).text($msgText).fadeIn($msgAnimateTime);
+        });
+    }
+    
+    function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+        var $msgOld = $divTag.text();
+        msgFade($textTag, $msgText);
+        $divTag.addClass($divClass);
+        $iconTag.removeClass("glyphicon-chevron-right");
+        $iconTag.addClass($iconClass + " " + $divClass);
+        setTimeout(function() {
+            msgFade($textTag, $msgOld);
+            $divTag.removeClass($divClass);
+            $iconTag.addClass("glyphicon-chevron-right");
+            $iconTag.removeClass($iconClass + " " + $divClass);
+  		}, $msgShowTime);
+    }
+});
+    $(document).ready(function() {
+        $('.cboKQVong').val('11').prop('selected', true);
+        $('.cboLichThiDau').val('12').prop('selected', true);
+    });
+
+
+    $.fn.typer = function(text, options) {
+        options = $.extend({}, {
+            char: ' ',
+            delay: 2200,
+            duration: 600,
+            endless: true
+        }, options || text);
+
+        text = $.isPlainObject(text) ? options.text : text;
+
+        var elem = $(this),
+            isTag = false,
+            c = 0;
+
+        (function typetext(i) {
+            var e = ({
+                    string: 1,
+                    number: 1
+                }[typeof text] ? text : text[i]) + options.char,
+                char = e.substr(c++, 1);
+
+            if (char === '<') {
+                isTag = true;
+            }
+            if (char === '>') {
+                isTag = false;
+            }
+            elem.html(e.substr(0, c));
+            if (c <= e.length) {
+                if (isTag) {
+                    typetext(i);
+                } else {
+                    setTimeout(typetext, options.duration / 10, i);
+                }
+            } else {
+                c = 0;
+                i++;
+
+                if (i === text.length && !options.endless) {
+                    return;
+                } else if (i === text.length) {
+                    i = 0;
+                }
+                setTimeout(typetext, options.delay, i);
+            }
+        })(0);
+    };
+
+    $('#type').typer(['<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Đón xem trận đấu cực hot Arsenal gặp Manchester United ngày 19/11</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Liverpool đang tạm thời dẫn đầu giải ngoại hạng Anh</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Sau 11 vòng Arsenal về lại vị trí thứ 4 huyền thoại</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Real Marid vươn lên đầu bảng với 27 điểm</b>']);
+
+</script>

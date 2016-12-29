@@ -11,6 +11,10 @@
 </head>
 
 <style>
+    .nopadding {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
     #login-modal .modal-dialog {
         width: 350px;
     }
@@ -144,6 +148,7 @@
     .form-control {
         border-radius: 0px;
     }
+    
     .progress-bar {
         background-color: #e6e6e6;
         height: 25px;
@@ -289,7 +294,6 @@
         color: #fff;
         font-size: 20px;
         line-height: 55px;
-        
         box-sizing: border-box;
     }
     
@@ -301,7 +305,6 @@
         color: #fff;
         font-size: 20px;
         line-height: 55px;
-       
         box-sizing: border-box;
     }
     
@@ -366,7 +369,6 @@
     .navbardropdown li a {
         color: black !important;
     }
-
 </style>
 
 <body>
@@ -464,7 +466,7 @@
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
                                 <li><a href="#">CHUYỂN NHƯỢNG</a></li>
-                   <li role="separator" class="divider"></li>
+                                <li role="separator" class="divider"></li>
                                 <li><a href="LichThiDau.html">LỊCH THI ĐẤU</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="BangKetQua.html">KẾT QUẢ</a></li>
@@ -473,26 +475,40 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" style="height:20px;">
+            <iframe style="height:20px; margin-top:10px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+            <strong style="margin-left:-88px;" id="type"></strong>
+            <ul class="nav navbar-nav navbar-right" style="height:20px; color:black; font-size:bolder;">
+                <li>
+<!--
+                    <form class="navbar-form form-inline" role="search">
+                        <div class="input-group" style="float:left;">
+                            <input style="width:200px;" type="text" class="form-control input-sm" placeholder="Nhập nội dung tìm kiếm" name="q">
 
-            <ul class="nav navbar-nav navbar-right">
-                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+                        </div>
+                        <div class="input-group-btn" style="float:left;">
+                            <button class="btn btn-default btn-md" style="height:30px;" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </form>
+-->
+                </li>
+                <li><a style="color:green;" class="text-center"><strong>Thứ ba, 15-11-2016</strong> <span class="glyphicon glyphicon-calendar"></span></a></li>
+
             </ul>
-
 
         </div>
         <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
         <div class="container-fluid text-center">
             <div class="row content">
-                <div class="col-md-3 sidenav ">
+                <div class="col-md-3 sidenav " style="margin-top:-20px;">
 
 
-                    
+
                     <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">ĐỘI HÌNH CHÍNH</p></a>
 
 
@@ -575,7 +591,7 @@
                                         <h3>0</h3>
                                     </div>
                                     <div class="col-md-4 text-center">
-                                        <h3 style="color:red;">VS</h3>
+                                        <h3 style="color:red;">FT</h3>
                                     </div>
                                     <div class="col-md-4 text-center">
                                         <h3>0</h3>
@@ -594,7 +610,7 @@
                                 <h4 style="margin-left:30px;"><a href="#">BURNLEY</a></h4>
                             </div>
                         </div>
-
+<hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000; width:660px; margin-left:-15px; "></hr>
 
                         <div class="row">
                             <div class="row teamcaption" style="color:red;">
@@ -605,7 +621,7 @@
 
                                 <iframe src="http://www.scoresway.com/?sport=soccer&amp;page=match&amp;view=pitchview&amp;id=2241851" width="540" height="390" frameborder="0" scrolling="no"></iframe>
                             </div>
-                            <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                            <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000; width:660px; margin-left:-15px; "></hr>
                             <div class="row" style="margin-top:10px;">
                                 <table class="tblachieve table table-condensed table-striped" style="color:black;">
 
@@ -620,28 +636,139 @@
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td class="text-center" style="color:red; "><strong>Ander Herrera</strong></td>
-                                            <td class="giai text-center" style="background-color:lightgrey; color:white; font-weight:bold;">33'</td>
+                                            <td class="text-center" style="color:black; "><img src="img/yellow.png" style="width:20px; height:20px;" /><strong>Ander Herrera</strong></td>
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">33'</td>
 
-                                            <td class="text-center" style="color:red;"><strong></strong></td>
+                                            <td class="text-center" style="color:black;"><strong></strong></td>
 
 
                                         </tr>
+
 
                                         <tr>
                                             <td class="text-center" style="color:red; "><strong></strong></td>
-                                            <td class="giai text-center" style="background-color:lightgrey; color:white; font-weight:bold;">44'</td>
+                                            <td class="giai text-center"></td>
 
-                                            <td class="text-center" style="color:red;"><strong>S. Ward- <i style="color:green;">J. Flanagan</i></strong></td>
+                                            <td class="text-center" style="color:red;"><strong><i style="color:green;">J. Flanagan <span class="glyphicon glyphicon-arrow-left"></span> </i></strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">44'</td>
+
+                                            <td class="text-center" style="color:red;"><strong>S. Ward <span class="glyphicon glyphicon-arrow-right"></span></strong></td>
 
 
                                         </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+                                            <td class="giai text-center"></td>
+
+                                            <td class="text-center" style="color:red;"><strong><i style="color:green;">A. Barnes <span class="glyphicon glyphicon-arrow-left"></span> </i></strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">60'</td>
+
+                                            <td class="text-center" style="color:red;"><strong>A. Gray <span class="glyphicon glyphicon-arrow-right"></span></strong></td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:black;"><strong></strong></td>
+
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">67'</td>
+
+                                            <td class="text-center" style="color:black; "><img src="img/yellow.png" style="width:20px; height:20px;" /><strong> J. Flanagan</strong></td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:black; "><img src="img/yellow-red.png" style="width:20px; height:20px;" /><strong>Ander Herrera</strong></td>
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">68'</td>
+
+                                            <td class="text-center" style="color:black;"><strong></strong></td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red;"><strong><i style="color:green;"><span class="glyphicon glyphicon-arrow-right"></span> M. Fellaini </i></strong></td>
+                                            <td class="giai text-center"></td>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
 
 
 
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red;"><strong><span class="glyphicon glyphicon-arrow-left"></span>Mata</strong></td>
+
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">73'</td>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red;"><strong><i style="color:green;"><span class="glyphicon glyphicon-arrow-right"></span>M. Depay </i></strong></td>
+                                            <td class="giai text-center"></td>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red;"><strong><span class="glyphicon glyphicon-arrow-left"></span>M. Rashford</strong></td>
+
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">82'</td>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:black; "><img src="img/yellow.png" style="width:20px; height:20px;" /><strong>P. Pogba</strong></td>
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">84'</td>
+
+                                            <td class="text-center" style="color:black;"><strong></strong></td>
+
+
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+                                            <td class="giai text-center"></td>
+
+                                            <td class="text-center" style="color:red;"><strong><i style="color:green;">G. Boyd <span class="glyphicon glyphicon-arrow-left"></span> </i></strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:red; "><strong></strong></td>
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">85'</td>
+
+                                            <td class="text-center" style="color:red;"><strong>J. Guðmundson <span class="glyphicon glyphicon-arrow-right"></span></strong></td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:black;"><strong></strong></td>
+
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">90'</td>
+
+                                            <td class="text-center" style="color:black; "><img src="img/yellow.png" style="width:20px; height:20px;" /><strong> D. Marney</strong></td>
+
+
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center" style="color:black;"><strong></strong></td>
+
+                                            <td class="giai text-center" style="background-color:grey; color:white; font-weight:bold;">90'</td>
+
+                                            <td class="text-center" style="color:black; "><img src="img/yellow.png" style="width:20px; height:20px;" /><strong> T. Heaton</strong></td>
+
+
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
+                    
                             <div class="row">
                                 <div class="panel panel-default">
                                     <div class="panel-heading"><strong style="color:red;">THỐNG KÊ</strong></div>
@@ -778,10 +905,10 @@
                                         <h4>Kiểm soát bóng</h4>
 
                                         <div class="row">
-                                            <div class="col-md-6 text-center" style="background-color:green; height:30px;">
+                                            <div class="col-md-6 text-center nopadding" style="background-color:green; height:30px;">
                                                 <h4 style="color:white; font-weight:bold;">64</h4>
                                             </div>
-                                            <div class="col-md-1"><img src="images/ball-icon.png" /></div>
+                                            <div class="col-md-1"><img src="img/ball.png" style="width:40px; height:40px;margin-left:-8px; margin-top:-5px;" /></div>
                                             <div class="col-md-5 text-center" style="background-color:red; height:30px;">
                                                 <h4 style="color:white; font-weight:bold;">36</h4>
                                             </div>
@@ -854,14 +981,14 @@
                 </div>
 
 
-                <div class="col-md-3 sidenav ">
+                <div class="col-md-3 sidenav " style="margin-top:-20px;">
 
 
 
                     <div class="container=fluid">
 
 
-                        
+
                         <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">ĐỘI HÌNH CHÍNH</p></a>
 
 
@@ -1012,17 +1139,17 @@
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
+                                <span id="text-lost-msg">Nhập Email</span>
                             </div>
-                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                            <input id="lost_email" class="form-control" type="text" placeholder="Nhập Email" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Gửi</button>
                             </div>
                             <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Đăng ký</button>
                             </div>
                         </div>
                     </form>
@@ -1033,19 +1160,19 @@
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register an account.</span>
+                                <span id="text-register-msg">Tạo tài khoản</span>
                             </div>
-                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="register_username" class="form-control" type="text" placeholder="Nhập Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="Nhập Email" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Mật khẩu" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng ký</button>
                             </div>
                             <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
                             </div>
                         </div>
                     </form>
@@ -1057,6 +1184,7 @@
             </div>
         </div>
     </div>
+
 </html>
 <script>
     $(function() {
@@ -1071,3 +1199,91 @@
 
 <script src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+    $(function() {
+    
+    var $formLogin = $('#login-form');
+    var $formLost = $('#lost-form');
+    var $formRegister = $('#register-form');
+    var $divForms = $('#div-forms');
+    var $modalAnimateTime = 300;
+    var $msgAnimateTime = 150;
+    var $msgShowTime = 2000;
+
+    $("form").submit(function () {
+        switch(this.id) {
+            case "login-form":
+                var $lg_username=$('#login_username').val();
+                var $lg_password=$('#login_password').val();
+                if ($lg_username == "ERROR") {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
+                } else {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+                }
+                return false;
+                break;
+            case "lost-form":
+                var $ls_email=$('#lost_email').val();
+                if ($ls_email == "ERROR") {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
+                } else {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
+                }
+                return false;
+                break;
+            case "register-form":
+                var $rg_username=$('#register_username').val();
+                var $rg_email=$('#register_email').val();
+                var $rg_password=$('#register_password').val();
+                if ($rg_username == "ERROR") {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
+                } else {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
+                }
+                return false;
+                break;
+            default:
+                return false;
+        }
+        return false;
+    });
+    
+    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
+    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
+    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
+    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
+    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
+    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
+    
+    function modalAnimate ($oldForm, $newForm) {
+        var $oldH = $oldForm.height();
+        var $newH = $newForm.height();
+        $divForms.css("height",$oldH);
+        $oldForm.fadeToggle($modalAnimateTime, function(){
+            $divForms.animate({height: $newH}, $modalAnimateTime, function(){
+                $newForm.fadeToggle($modalAnimateTime);
+            });
+        });
+    }
+    
+    function msgFade ($msgId, $msgText) {
+        $msgId.fadeOut($msgAnimateTime, function() {
+            $(this).text($msgText).fadeIn($msgAnimateTime);
+        });
+    }
+    
+    function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+        var $msgOld = $divTag.text();
+        msgFade($textTag, $msgText);
+        $divTag.addClass($divClass);
+        $iconTag.removeClass("glyphicon-chevron-right");
+        $iconTag.addClass($iconClass + " " + $divClass);
+        setTimeout(function() {
+            msgFade($textTag, $msgOld);
+            $divTag.removeClass($divClass);
+            $iconTag.addClass("glyphicon-chevron-right");
+            $iconTag.removeClass($iconClass + " " + $divClass);
+  		}, $msgShowTime);
+    }
+});
+</script>

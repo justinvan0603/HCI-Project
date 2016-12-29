@@ -11,6 +11,18 @@
 </head>
 
 <style>
+    .caption {
+        display: block;
+        width: 100%;
+        background: #009900;
+        height: 40px;
+        padding-left: 10px;
+        color: #fff !important;
+        font-size: 20px;
+        line-height: 55px;
+        box-sizing: border-box;
+    }
+    
     #login-modal .modal-dialog {
         width: 350px;
     }
@@ -144,30 +156,30 @@
     .form-control {
         border-radius: 0px;
     }
-    .tbldoihinh{
+    
+    .tbldoihinh {
         color: black;
         font-weight: 500;
     }
-    .tblachieve{
+    
+    .tblachieve {
         font-weight: 500;
     }
-    .giai{
-        color:green;
-        
-    }
     
+    .giai {
+        color: green;
+    }
     
     footer a {
         color: white;
     }
     
-
     #top-link-block {
         position: fixed;
         bottom: 0px;
         right: 0px;
     }
-
+    
     .navnews a {
         color: #009900;
         font-weight: bold;
@@ -178,8 +190,6 @@
         font-weight: bold;
     }
     
-
-    
     .higtlightnews {
         color: black;
     }
@@ -187,7 +197,6 @@
     .scheduler a {
         color: black;
     }
-
     
     .winteam {
         color: red;
@@ -197,34 +206,17 @@
         color: #666666;
     }
     
-
-    
     .item p {
         color: black;
         font-size: bolder;
     }
     
-
-
     a {
         color: black;
     }
     
     a:hover {
         color: #cc0000;
-    }
-    
-    .caption {
-        display: block;
-        width: 100%;
-        background: #009900;
-        height: 55px;
-        padding-left: 10px;
-        color: #fff;
-        font-size: 20px;
-        line-height: 55px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
-        box-sizing: border-box;
     }
     
     .teamcaption {
@@ -235,7 +227,6 @@
         color: #fff;
         font-size: 20px;
         line-height: 55px;
-        
         box-sizing: border-box;
     }
     
@@ -354,7 +345,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">CHAMPIONS LEAGUE
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
- <li><a href="DanhSachBaiViet.html">TIN TỨC</a></li>
+                                <li><a href="DanhSachBaiViet.html">TIN TỨC</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="DanhSachBaiViet.html">NHẬN ĐỊNH</a></li>
 
@@ -396,8 +387,8 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                         <li><a href="ChuyenNhuong.html">CHUYỂN NHƯỢNG</a></li>
-                   <li role="separator" class="divider"></li>
+                                <li><a href="ChuyenNhuong.html">CHUYỂN NHƯỢNG</a></li>
+                                <li role="separator" class="divider"></li>
                                 <li><a href="LichThiDau.html">LỊCH THI ĐẤU</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="BangKetQua.html">KẾT QUẢ</a></li>
@@ -406,14 +397,21 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#login-modal"><span class="glyphicon glyphicon-log-in"></span> Đăng nhập</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
-
-            <ul class="nav navbar-nav navbar-right">
+        <div class="container-fluid" style="height:25px;">
+<div class="text-left" style="float:left; height:8px; margin-top:8px;">
+                <ol class="breadcrumb">
+                    <li><a href="Index.html">Trang chủ</a></li>
+                    <li><a href="DanhSachBaiViet.html">Đội bóng</a></li>
+                    <li><a href="ChiTietBaiViet.html"><strong>Arsenal</strong></a></li>
+                </ol>
+                
+            </div>
+            <ul class="nav navbar-nav navbar-right" style="margin-top:10px;">
                 <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
             </ul>
 
@@ -427,7 +425,7 @@
 
 
 
-                    <object width="160" height="600">
+                    <object width="218" height="600">
 
 <param name="movie" value="animation-side.swf">
 
@@ -479,111 +477,329 @@
                             </div>
                         </div>
                         <hr></hr>
-    
+
 
                     </div>
-                            <div class="collapse in container-fluid" id="CPN">
+                    <div class="collapse in container-fluid" id="CPN">
 
-                                <ul class="nav nav-tabs" style="margin-top:5px;">
-                                    <li class="navli active"><a data-toggle="tab" href="#CP">THÀNH TÍCH</a></li>
-                                    <li class="navli"><a data-toggle="tab" href="#CP1">ĐỘI HÌNH</a></li>
-
-                                </ul>
-
-                                <div class="tab-content">
-                                    <div id="CP" class="tab-pane fade in active">
-                                        <div class="row">
-
-                                                <table class="tblachieve table table-condensed" style="color:black;">
-                                                    <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
-                                                        <tr>
-                                                            <th>Giải đấu</th>
-                                                            <th>Thành tích</th>
-                                                            <th>Số lần</th>
-                                                            <th>Mùa giải</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="giai">Ngoại hạng Anh</td>
-                                                            <td>Quán quân</td>
-                                                            <td>13x</td>
-                                                            <td>2003/2004 , 2001/2002 , 1997/1998 , 1990/1991 , 1988/1989 , 1970/1971 , 1952/1953 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="giai">Ngoại hạng Anh</td>
-                                                            <td>Quán quân</td>
-                                                            <td>13x</td>
-                                                            <td>2003/2004 , 2001/2002 , 1997/1998 , 1990/1991 , 1988/1989 , 1970/1971 , 1952/1953 </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="giai">Ngoại hạng Anh</td>
-                                                            <td>Quán quân</td>
-                                                            <td>13x</td>
-                                                            <td>2003/2004 , 2001/2002 , 1997/1998 , 1990/1991 , 1988/1989 , 1970/1971 , 1952/1953 </td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                        <ul class="nav nav-tabs" style="margin-top:5px; margin-left:-15px;">
+                            <li class="navli active"><a data-toggle="tab" href="#CP">THÀNH TÍCH</a></li>
 
 
-                                    </div>
-                                    <div id="CP1" class="tab-pane fade">
-                                        <div class="row">
-                                            
-                                <table class="tbldoihinh table table-condensed" >
-                                <thead style="font-weight:bold; background: #808080; color:#fff;">
-                                    <tr>
-                           
-                                        
-                                        <th>Cầu thủ</th>
-                                        <th>Quốc tịch</th>
-                                        <th>Vị trí</th>
-                             
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                       
-                                        <td><a href="#"><img src="images/avatar.png"/> K. Omeruo</a></td>
-                                        <td>Nigeria</td>
-                                        <td>Hậu vệ</td>
-                                        
-                                    </tr>
-                                    <tr>
-                                
-                                        <td><a href="#"><img  src="images/avatar.png"/> K. Omeruo</a></td>
-                                    <td>Nigeria</td>
-                                        <td>Hậu vệ</td>
-                                    </tr>
-                                                            <tr>
-                                
-                                        <td><a href="#"><img  src="images/avatar.png"/> K. Omeruo</a></td>
-                                    <td>Nigeria</td>
-                                        <td>Hậu vệ</td>
-                                    </tr>
-                                                            <tr>
-                                
-                                        <td><a href="#"><img  src="images/avatar.png"/> K. Omeruo</a></td>
-                                    <td>Nigeria</td>
-                                        <td>Hậu vệ</td>
-                                    </tr>
-                                                            <tr>
-                                
-                                        <td><a href="#"><img  src="images/avatar.png"/> K. Omeruo</a></td>
-                                    <td>Nigeria</td>
-                                        <td>Hậu vệ</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                                        </div>
+                        </ul>
 
-                                    </div>
+                        <div class="tab-content">
+                            <div id="CP" class="tab-pane fade in active">
+                                <div class="row">
 
+                                    <table class="tblachieve table table-condensed" style="color:black;">
+                                        <thead class="text-center" style="font-weight:bold; background: #808080; color:#fff;">
+                                            <tr>
+                                                <th>Giải đấu</th>
+                                                <th>Thành tích</th>
+                                                <th>Số lần</th>
+                                                <th>Mùa giải</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="giai">Ngoại hạng Anh</td>
+                                                <td>Quán quân</td>
+                                                <td>13x</td>
+                                                <td>2003/2004 , 2001/2002 , 1997/1998 , 1990/1991 , 1988/1989 , 1970/1971 , 1952/1953 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="giai">Ngoại hạng Anh</td>
+                                                <td>Quán quân</td>
+                                                <td>13x</td>
+                                                <td>2003/2004 , 2001/2002 , 1997/1998 , 1990/1991 , 1988/1989 , 1970/1971 , 1952/1953 </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="giai">Ngoại hạng Anh</td>
+                                                <td>Quán quân</td>
+                                                <td>13x</td>
+                                                <td>2003/2004 , 2001/2002 , 1997/1998 , 1990/1991 , 1988/1989 , 1970/1971 , 1952/1953 </td>
+                                            </tr>
 
+                                        </tbody>
+                                    </table>
                                 </div>
+
+
                             </div>
+
+
+
+                        </div>
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000; width:735px; margin-left:-15px; "></hr>
+                        <h3 style="color:red;">ĐỘI HÌNH</h3>
+                        <div class="row teamcaption" style="background-color:grey;">
+                            <div class="col-xs-12 nopadding">THỦ MÔN</div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">M. Maccey</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Cech.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">P. Cech</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Ospina.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">D. Ospina</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Martinez.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">D. Martinez</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row teamcaption" style="background-color:grey;">
+                            <div class="col-xs-12 nopadding">HẬU VỆ</div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Mustafi.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">S. Mustafi</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Debuchy.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">M. Debuchy</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Nacho%20Monreal.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Nacho Monreal</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/K.Gibbs.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">K. Gibbs</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Koscielny.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">L. Koscielny</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Mertesacker.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">P.Mertesacker</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Paulista.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Gabriel Paulista</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">C. Jenkinson</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Bellerín</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">M. Bola</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">R. Holding</figcaption>
+                                </figure>
+                            </div>
+
+                        </div>
+                        <div class="row teamcaption" style="background-color:grey;">
+                            <div class="col-xs-12 nopadding">TIỀN VỆ</div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">K. Bielik</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">B. Sheaf</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">J. Da Silva</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">J. Reine-Adelaide</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">G. Zelalem</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">A. Maitland-Niles</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Mohamed El Nenny</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Chamberlain.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">A. Oxlade-Chamberlain</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Ozil.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">M. Özil</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Coquelin.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">F. Coquelin</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Ramsey.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">A. Ramsey</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Carzola.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Cazorla</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Xhaka.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">G. Xhaka</figcaption>
+                                </figure>
+                            </div>
+
+
+
+                        </div>
+                        <div class="row teamcaption" style="background-color:grey;">
+                            <div class="col-xs-12 nopadding">TIỀN ĐẠO</div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Sanchez.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">A. Sánchez</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Walcott.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">T. Walcott</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Welbeck.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">D. Welbeck</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Giroud.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">O. Giroud</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Sanogo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Y. Sanogo</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/Carzola.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">C. Akpom</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Willock</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Iwobi</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">D. Welbeck</figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-xs-2">
+                                <figure>
+                                    <img src="img/no_photo.png" style="width:70px; height:70px;" />
+                                    <figcaption style=" font-weight:bold;">Mavididi</figcaption>
+                                </figure>
+                            </div>
+                            
+                        </div>
+                    </div>
+
 
                 </div>
 
@@ -596,21 +812,31 @@
 
 
 
-                        
-<div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">GIẢI BÓNG HÀNG ĐẦU</p></a>
+
+                        <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">GIẢI BÓNG HÀNG ĐẦU</p></a>
 
 
                         </div>
                         <ul class="list-group text-left">
-                            <li class="list-group-item"><a href="#"><img src="images/68.png"/> NGOẠI HẠNG ANH</a></li>
-                            <li class="list-group-item"><a href="#"><img src="images/7.png"/> CHAMPIONS LEAGUE</a> </li>
-                            <li class="list-group-item"><a href="#"><img src="images/176.png"/> LA LIGA</a> </li>
-                            <li class="list-group-item"><a href="#"><img src="images/80.png"/> BUNDESLIGA</a></li>
-                            <li class="list-group-item"><a href="#"><img src="images/100.png"/> SERIE A</a></li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/68.png" /> NGOẠI HẠNG ANH</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/7.png" /> CHAMPIONS LEAGUE</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/176.png" /> LA LIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/80.png" /> BUNDESLIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#"><img src="images/100.png" /> SERIE A</a>
+                            </li>
                         </ul>
 
-<hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                        <div class="container-fluid">
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
+                        <div class="container-fluid" style="margin-left:-15px; width:360px;">
 
                             <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
 
@@ -641,86 +867,87 @@
             <!-- /top-link-block -->
 
 
-            
+
 
         </div>
 
-    <footer class="container-fluid ">
-                <div class="row-content">
-                    <div class="col-md-5">
-                        <p><span class="glyphicon glyphicon-th"></span> Môn học: Giao tiếp người máy</p>
-                        <p><span class="glyphicon glyphicon-cog"></span> Mã lớp: SE215.H11</p>
-                        <p><span class="glyphicon glyphicon-link"></span> Nhóm : 05</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p><span class="glyphicon glyphicon-list"></span> Danh sách thành viên:</p>
-                        <p><span class="glyphicon glyphicon-tag"></span> Văn Trương Quốc Thắng 13520776</p>
-                        <p><span class="glyphicon glyphicon-tag"></span> Nguyễn Quang Nghĩa 13520540</p>
-                        <p><span class="glyphicon glyphicon-tag"></span> Trương Ngọc Sơn 13520715</p>
+        <footer class="container-fluid ">
+            <div class="row-content">
+            <div class="col-md-5">
+                <p style="color:white;"><span class="glyphicon glyphicon-th"></span>THÔNG TIN TOÀ SOẠN </p>
+                <p style="color:white;"><span class="glyphicon glyphicon-cog"></span>Tổng Biên tập: ABC</p>
+                <p style="color:white;"><span class="glyphicon glyphicon-link"></span> Phó tổng Biên tập: Nguyễn Văn A</p>
+                <p style="color:white; margin-left:137px;">Trần Văn B</p>
+            </div>
+            <div class="col-md-4">
+                <p style="color:white;"><span class="glyphicon glyphicon-list"></span> ĐỊA CHỈ LIÊN HỆ:</p>
+                <p style="color:white;"><span class="glyphicon glyphicon-tag"></span>Tầng 6+7 tòa nhà Licogi </p>
+                <p style="color:white;"><span class="glyphicon glyphicon-tag"></span> ĐT: (84.4) 35541188 - (84.4) 35541199 - Fax: (84.4) 35539898</p>
+                <p style="color:white;"><span class="glyphicon glyphicon-tag"></span>Email: toasoan@tinbongda.vn - Website: http://tinbongda.vn</p>
+                <p style="color:white;"><span class="glyphicon glyphicon-tag"></span>Liên hệ quảng cáo: <a href="FormLienHe.html">Tại đây</a></p>
+            </div>
+            <div class="col-md-3">
+                <img src="images/Web-logo.png" />
+            </div>
+        </div>
 
-                    </div>
-                    <div class="col-md-3">
-                        <img src="images/Web-logo.png" />
-                    </div>
-                </div>
-
-            </footer>
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header" align="center">
-                    <img class="img-circle" id="img_logo" src="img/Football.ico">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        </footer>
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" align="center">
+                        <img class="img-circle" id="img_logo" src="img/Football.ico">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 					</button>
-                </div>
+                    </div>
 
-                <!-- Begin # DIV Form -->
-                <div id="div-forms">
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
 
-                    <!-- Begin # Login Form -->
-                    <form id="login-form">
-                        <div class="modal-body">
-                            <div id="div-login-msg">
-                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-login-msg">Nhập thông tin tài khoản</span>
-                            </div>
-                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
-                            <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
-                            <div class="checkbox">
-                                <label>
+                        <!-- Begin # Login Form -->
+                        <form id="login-form">
+                            <div class="modal-body">
+                                <div id="div-login-msg">
+                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-login-msg">Nhập thông tin tài khoản</span>
+                                </div>
+                                <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                                <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
+                                <div class="checkbox">
+                                    <label>
                                     <input type="checkbox"> Nhớ mật khẩu
                                 </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                                </div>
+                                <div>
+                                    <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
+                                    <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
+                                </div>
                             </div>
-                            <div>
-                                <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
-                                <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End # Login Form -->
+                        </form>
+                        <!-- End # Login Form -->
 
-                    <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
+                        <!-- Begin | Lost Password Form -->
+                        <form id="lost-form" style="display:none;">
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
+                                <span id="text-lost-msg">Nhập Email</span>
                             </div>
-                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                            <input id="lost_email" class="form-control" type="text" placeholder="Nhập Email" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Gửi</button>
                             </div>
                             <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Đăng ký</button>
                             </div>
                         </div>
                     </form>
@@ -731,30 +958,30 @@
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register an account.</span>
+                                <span id="text-register-msg">Tạo tài khoản</span>
                             </div>
-                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="register_username" class="form-control" type="text" placeholder="Nhập Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="Nhập Email" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Mật khẩu" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng ký</button>
                             </div>
                             <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
                             </div>
                         </div>
                     </form>
-                    <!-- End | Register Form -->
+                        <!-- End | Register Form -->
+
+                    </div>
+                    <!-- End # DIV Form -->
 
                 </div>
-                <!-- End # DIV Form -->
-
             </div>
         </div>
-    </div>
 </html>
 <script>
     function btnCloseClick() {
@@ -765,3 +992,91 @@
 
 <script src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+    $(function() {
+    
+    var $formLogin = $('#login-form');
+    var $formLost = $('#lost-form');
+    var $formRegister = $('#register-form');
+    var $divForms = $('#div-forms');
+    var $modalAnimateTime = 300;
+    var $msgAnimateTime = 150;
+    var $msgShowTime = 2000;
+
+    $("form").submit(function () {
+        switch(this.id) {
+            case "login-form":
+                var $lg_username=$('#login_username').val();
+                var $lg_password=$('#login_password').val();
+                if ($lg_username == "ERROR") {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
+                } else {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+                }
+                return false;
+                break;
+            case "lost-form":
+                var $ls_email=$('#lost_email').val();
+                if ($ls_email == "ERROR") {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
+                } else {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
+                }
+                return false;
+                break;
+            case "register-form":
+                var $rg_username=$('#register_username').val();
+                var $rg_email=$('#register_email').val();
+                var $rg_password=$('#register_password').val();
+                if ($rg_username == "ERROR") {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
+                } else {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
+                }
+                return false;
+                break;
+            default:
+                return false;
+        }
+        return false;
+    });
+    
+    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
+    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
+    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
+    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
+    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
+    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
+    
+    function modalAnimate ($oldForm, $newForm) {
+        var $oldH = $oldForm.height();
+        var $newH = $newForm.height();
+        $divForms.css("height",$oldH);
+        $oldForm.fadeToggle($modalAnimateTime, function(){
+            $divForms.animate({height: $newH}, $modalAnimateTime, function(){
+                $newForm.fadeToggle($modalAnimateTime);
+            });
+        });
+    }
+    
+    function msgFade ($msgId, $msgText) {
+        $msgId.fadeOut($msgAnimateTime, function() {
+            $(this).text($msgText).fadeIn($msgAnimateTime);
+        });
+    }
+    
+    function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+        var $msgOld = $divTag.text();
+        msgFade($textTag, $msgText);
+        $divTag.addClass($divClass);
+        $iconTag.removeClass("glyphicon-chevron-right");
+        $iconTag.addClass($iconClass + " " + $divClass);
+        setTimeout(function() {
+            msgFade($textTag, $msgOld);
+            $divTag.removeClass($divClass);
+            $iconTag.addClass("glyphicon-chevron-right");
+            $iconTag.removeClass($iconClass + " " + $divClass);
+  		}, $msgShowTime);
+    }
+});
+</script>

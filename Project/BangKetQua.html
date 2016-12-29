@@ -11,6 +11,51 @@
 </head>
 
 <style>
+    @-webkit-keyframes blackWhite {
+        0% {
+            color: green;
+        }
+        50% {
+            color: green;
+        }
+        51% {
+            color: red;
+        }
+        100% {
+            color: red;
+        }
+    }
+    
+    .blinkdiv {
+        -webkit-animation-name: blackWhite;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 1s;
+    }
+    
+    .caption {
+        display: block;
+        width: 100%;
+        background: #009900;
+        height: 40px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 20px;
+        line-height: 55px;
+        box-sizing: border-box;
+    }
+    
+    .tableheader {
+        color: white;
+    }
+    
+    .tableheader:hover {
+        color: #cc0000;
+    }
+    
+    .scoreboard tbody tr {
+        font-size: 12, 5px;
+    }
+    
     #login-modal .modal-dialog {
         width: 350px;
     }
@@ -144,6 +189,7 @@
     .form-control {
         border-radius: 0px;
     }
+    
     .list-group-horizontal .list-group-item {
         display: inline-block;
     }
@@ -163,6 +209,7 @@
         border-top-right-radius: 4px;
         border-bottom-left-radius: 0;
     }
+    
     .tbldoihinh {
         color: black;
         font-weight: 500;
@@ -225,19 +272,6 @@
         color: #cc0000;
     }
     
-    .caption {
-        display: block;
-        width: 100%;
-        background: #009900;
-        height: 55px;
-        padding-left: 10px;
-        color: #fff;
-        font-size: 20px;
-        line-height: 55px;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
-        box-sizing: border-box;
-    }
-    
     .teamcaption {
         display: block;
         width: 739px;
@@ -246,7 +280,6 @@
         color: #fff;
         font-size: 20px;
         line-height: 55px;
-        
         box-sizing: border-box;
     }
     
@@ -283,6 +316,9 @@
         }
         .row.content {
             height: auto;
+        }
+        #type {
+            font-size: 12px;
         }
     }
     
@@ -407,8 +443,8 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">KHÁC
         <span class="caret"></span></a>
                             <ul class="navbardropdown dropdown-menu">
-                         <li><a href="ChuyenNhuong.html">CHUYỂN NHƯỢNG</a></li>
-                   <li role="separator" class="divider"></li>
+                                <li><a href="ChuyenNhuong.html">CHUYỂN NHƯỢNG</a></li>
+                                <li role="separator" class="divider"></li>
                                 <li><a href="LichThiDau.html">LỊCH THI ĐẤU</a></li>
                                 <li role="separator" class="divider"></li>
                                 <li><a href="BangKetQua.html">KẾT QUẢ</a></li>
@@ -422,12 +458,32 @@
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">
+        <div class="container-fluid" style="height:20px;">
+            <div class="text-left" style="float:left; height:8px; margin-top:2px;">
+                <ol class="breadcrumb">
+                    <li><a href="Index.html">Trang chủ</a></li>
+                    <li><a href="DanhSachBaiViet.html"><strong>Kết quả</strong></a></li>
+                    
+                </ol>
+                
+            </div>
+            <strong  id="type" style="margin-left:10px; position:relative; top:10px; margin-top:1000px;"></strong>
+            
+            <ul class="nav navbar-nav navbar-right" style="height:20px; color:black; font-size:bolder;">
+                <li>
+                    <form class="navbar-form form-inline" role="search">
+                        <div class="input-group" style="float:left;">
+                            <input style="width:200px;" type="text" class="form-control input-sm" placeholder="Nhập nội dung tìm kiếm" name="q">
 
-            <ul class="nav navbar-nav navbar-right">
-                <iframe style="height:20px; margin-top:5px;" class="fbshr" frameborder="0" scrolling="no" src="https://www.facebook.com/v2.3/plugins/like.php?app_id=113869198637480&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df3cee2e4e634dd2%26domain%3Ddevelopers.facebook.com%26origin%3Dhttps%253A%252F%252Fdevelopers.facebook.com%252Ff294e2e482c1e08%26relation%3Dparent.parent&amp;container_width=613&amp;href=https%3A%2F%2Ffacebook.com%2Fbaobongda&amp;layout=button_count&amp;locale=vi_VN&amp;share=true&amp;show_faces=true"></iframe>
+                        </div>
+                        <div class="input-group-btn" style="float:left;">
+                            <button class="btn btn-default btn-md" style="height:30px;" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </form>
+                </li>
+                <li><a style="color:green;" class="text-center"><strong>Thứ ba, 15-11-2016</strong> <span class="glyphicon glyphicon-calendar"></span></a></li>
+
             </ul>
-
 
         </div>
         <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
@@ -438,7 +494,7 @@
 
 
 
-                    <object width="160" height="600">
+                    <object width="218" height="600">
 
 <param name="movie" value="animation-side.swf">
 
@@ -452,111 +508,643 @@
 
                 <div class="col-md-7 text-left">
                     <div class="container-fluid">
-                        <div class="row teamcaption" style="background-color:grey;">
-                            <div class="col-xs-1 nopadding"><span class="glyphicon glyphicon-th-list" style="padding-top:10px;"></span></div>
-                            <div class="col-xs-11 nopadding">KẾT QUẢ</div>
+                        <div class="row">
+                            <div class="caption text-center"><a class="tableheader" href="#"><span class="glyphicon glyphicon-star"></span> BẢNG KẾT QUẢ <span class="glyphicon glyphicon-star"></span></a>
 
+                            </div>
+                            <div class="col-md-12 nopadding" style="height:230px;">
+                                <div class="container-fluid">
+
+                                    <ul class="nav nav-tabs" style="margin-left:-15px;">
+                                        <li class="navli active"><a data-toggle="tab" href="#home" class="blinkdiv">ĐANG DIỄN RA</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#menu1">CÁC TRẬN HOT</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#menu2">CÁC TRẬN KHÁC</a></li>
+
+                                    </ul>
+
+                                    <div class="tab-content">
+
+                                        <div id="home" class="tab-pane fade in active">
+
+
+                                            <table class="scoreboard table  table-condensed ">
+
+                                                <thead>
+
+                                                    <tr>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-3"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-4"></td>
+                                                        <td class="col-sm-1"></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td>06-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Man United</a></td>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /> </td>
+                                                        <td><a href="KetQuaTranDau.html"><strong>3-1</strong></a></td>
+                                                        <td><img src="fc/swansea-city58-3107.png" style="width:30px; height:30px;" /></td>
+                                                        <td align="left"><a class="loseteam" href="DoiBong.html">Swansea City</a></td>
+                                                        <td class="blinkdiv">20'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Everton</a></td>
+                                                        <td><img src="fc/everton_30x30.jpg" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>0-5</strong></a></td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                        <td><a class=" winteam" href="DoiBong.html">Chelsea</a></td>
+                                                        <td class="blinkdiv">30'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Arsenal</a></td>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>1-1</strong></a></td>
+                                                        <td><img src="fc/tottenham_30x30.png" /></td>
+                                                        <td><a class="loseteam" href="DoiBong.html">Tottenham</a></td>
+                                                        <td class="blinkdiv">68'</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Burnley</a></td>
+                                                        <td><img src="fc/Burnley_FC_badge.png" style="width:30px; height:30px" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>3-2</strong></a></td>
+
+                                                        <td><img src="fc/crystal-palace_30x30.png" /></td>
+                                                        <td><a class="loseteam" href="DoiBong.html">Crystal Palace</a></td>
+                                                        <td class="blinkdiv">15'</td>
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+
+                                        </div>
+                                        <div id="menu1" class="tab-pane fade">
+
+                                            <table class="scoreboard table  table-condensed ">
+
+                                                <thead>
+
+                                                    <tr>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-3"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-5"></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td>19-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Man United</a></td>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /> </td>
+                                                        <td><a href="KetQuaTranDau.html"><strong>1-1</strong></a></td>
+                                                        <td><img src="fc/arsenal_30x30.png" style="width:30px; height:30px;" /></td>
+                                                        <td align="left"><a class="loseteam" href="DoiBong.html">Arsenal</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Atletico Marid</a></td>
+                                                        <td><img src="fc/atletico.png" style="width:30px; height:30px;" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>0-3</strong></a></td>
+                                                        <td><img src="fc/real-madrid-hd-logo.png" style="width:30px; height:30px;" /></td>
+                                                        <td><a class=" winteam" href="DoiBong.html">Real Marid</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Barcelona</a></td>
+                                                        <td><img src="fc/fc-barcelona.png" style="width:30px; height:30px;" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>0-0</strong></a></td>
+                                                        <td><img src="fc/malaga.gif" style="width:30px; height:30px;" /></td>
+                                                        <td><a class="loseteam" href="DoiBong.html">Malaga</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Dormund</a></td>
+                                                        <td><img src="fc/Dortmund.png" style="width:30px; height:30px" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>1-0</strong></a></td>
+
+                                                        <td><img src="fc/Bayern.png" style="width:30px; height:30px" /></td>
+                                                        <td><a class="loseteam" href="DoiBong.html">Bayern Munich</a></td>
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+                                        <div id="menu2" class="tab-pane fade">
+
+                                            <table class="scoreboard table  table-condensed ">
+
+                                                <thead>
+
+                                                    <tr>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-3"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-5"></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td>20-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">West Bromwich</a></td>
+                                                        <td><img src="fc/west-bromwich_30x30%20(1).png" /> </td>
+                                                        <td><a href="KetQuaTranDau.html"><strong>4-0</strong></a></td>
+                                                        <td><img src="fc/Burnley_FC_badge.png" style="width:30px; height:30px;" /></td>
+                                                        <td align="left"><a class="loseteam" href="DoiBong.html">Burnley</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Watford</a></td>
+                                                        <td><img src="fc/Watford.png" style="width:30px; height:30px;" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>2-1</strong></a></td>
+                                                        <td><img src="fc/Leicester.png" style="width:30px; height:30px;" /></td>
+                                                        <td><a class="loseteam" href="DoiBong.html">Leicester City</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>22-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Leverkusen</a></td>
+                                                        <td><img src="fc/Leverkusen.png" style="width:30px; height:30px;" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>2-3</strong></a></td>
+                                                        <td><img src="fc/RB.png" style="width:30px; height:30px;" /></td>
+                                                        <td><a class="winteam" href="DoiBong.html">RB Leipzig</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Crontone</a></td>
+                                                        <td><img src="fc/Crontone.png" style="width:30px; height:30px" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>0-2</strong></a></td>
+
+                                                        <td><img src="fc/Torino.png" style="width:30px; height:30px" /></td>
+                                                        <td><a class="winteam" href="DoiBong.html">Torino</a></td>
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
-
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000; width:735px; margin-left:-15px; "></hr>
                         <div class="row">
-                            <div class="col-xs-6 " style="color:black; ">
-                                <div class="form-group form-inline">
-                                    <label class="input-sm" style="margin-top:4px;">Giải:</label>
-                                    <select style="margin-top:4px;" class="form-control input-sm">
-                                        <option><a href="#">Tất cả</a></option>
-                                        <option><a href="#">Champion League</a></option>
-            <option><a href="#">Ngoại hạng Anh</a></option>
-            <option><a href="#">LA LIGA</a></option>
-            <option><a href="#">BUNDESLIGA</a></option>
-            <option><a href="#">SERIE A</a></option>
+                            <div class="teamcaption" style="background-color:#009900;">
+                                <div class="col-xs-1 nopadding"><span class="glyphicon glyphicon-th-list" style="padding-top:10px;"></span></div>
+                                <div class="col-xs-11 nopadding">KẾT QUẢ CÁC GIẢI</div>
+
+
+                            </div>
+                            <div class="col-md-12 nopadding" style="height:305px;">
+                                <div class="container-fluid">
+
+                                    <ul class="nav nav-tabs" style="margin-left:-15px;">
+                                        <li class="navli active"><a data-toggle="tab" href="#EPL">NGOẠI HẠNG ANH</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#CP">CÚP C1</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#LLG">LA LIGA</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#BDL">BUNDESLIGA</a></li>
+                                        <li class="navli"><a data-toggle="tab" href="#SRA">SERIE A</a></li>
+
+                                    </ul>
+
+                                    <div class="tab-content">
+
+                                        <div id="EPL" class="tab-pane fade in active">
+                                            <div class="form-group form-inline">
+                                                <img src="img/EPL-icon.png" style="width:60px; height:60px;" />
+
+                                                <label class="input-sm" style="margin-top:4px;">Vòng:</label>
+                                                <select style="margin-top:4px;" class="cboKQVong form-control input-sm">
+                                                    <option value="1"><a href="#">1</a></option>
+                                                    <option value="2"><a href="#">2</a></option>
+                                                    <option value="3"><a href="#">3</a></option>
+                                                    <option value="4"><a href="#">4</a></option>
+                                                    <option value="5"><a href="#">5</a></option>
+                                                    <option value="6"><a href="#">6</a></option>
+                                                    <option value="7"><a href="#">7</a></option>
+                                                    <option value="8"><a href="#">8</a></option>
+                                                    <option value="9"><a href="#">9</a></option>
+                                                    <option value="10"><a href="#">10</a></option>
+                                                    <option value="11"><a href="#">11</a></option>
+                                                    
         </select>
-                                </div>
+                                            </div>
 
-                            </div>
-                            <div class="col-xs-6 ">
+                                            <table class="scoreboard table  table-condensed ">
 
-                                <div class="form-group form-inline">
-                                    <label class="input-sm" style="margin-top:4px;">Ngày:</label>
-                                    <input type="date" class="form-control input-sm">
+                                                <thead>
+
+                                                    <tr>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-3"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-1"></td>
+                                                        <td class="col-sm-5"></td>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                    <tr>
+                                                        <td>06-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Man United</a></td>
+                                                        <td><img src="fc/manchesterunited_30x30.png" /> </td>
+                                                        <td><a href="KetQuaTranDau.html"><strong>3-1</strong></a></td>
+                                                        <td><img src="fc/swansea-city58-3107.png" style="width:30px; height:30px;" /></td>
+                                                        <td align="left"><a class="loseteam" href="DoiBong.html">Swansea City</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Everton</a></td>
+                                                        <td><img src="fc/everton_30x30.jpg" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>0-5</strong></a></td>
+                                                        <td><img src="fc/chelsea_30x30.png" /></td>
+                                                        <td><a class=" winteam" href="DoiBong.html">Chelsea</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>06-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Arsenal</a></td>
+                                                        <td><img src="fc/arsenal_30x30.png" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>1-1</strong></a></td>
+                                                        <td><img src="fc/tottenham_30x30.png" /></td>
+                                                        <td><a class="loseteam" href="DoiBong.html">Tottenham</a></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>05-11</td>
+                                                        <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Burnley</a></td>
+                                                        <td><img src="fc/Burnley_FC_badge.png" style="width:30px; height:30px" /></td>
+
+                                                        <td><a href="KetQuaTranDau.html"><strong>3-2</strong></a></td>
+
+                                                        <td><img src="fc/crystal-palace_30x30.png" /></td>
+                                                        <td><a class="loseteam" href="DoiBong.html">Crystal Palace</a></td>
+                                                    </tr>
+
+                                                </tbody>
+
+                                            </table>
+
+                                        </div>
+                                        <div id="CP" class="tab-pane fade">
+                                            <div class="form-group form-inline">
+                                                <img src="img/c1.png" style="width:60px; height:60px;" />
+
+                                                <label class="input-sm" style="margin-top:4px;">Vòng:</label>
+                                                <select style="margin-top:4px;" class="cboKQVong form-control input-sm">
+                                                    <option value="1"><a href="#">1</a></option>
+                                                    <option value="2"><a href="#">2</a></option>
+                                                    <option value="3"><a href="#">3</a></option>
+                                                    <option value="4"><a href="#">4</a></option>
+                                                    <option value="5"><a href="#">5</a></option>
+                                                    <option value="6"><a href="#">6</a></option>
+                                                    <option value="7"><a href="#">7</a></option>
+                                                    <option value="8"><a href="#">8</a></option>
+                                                    <option value="9"><a href="#">9</a></option>
+                                                    <option value="10"><a href="#">10</a></option>
+                                                    <option value="11"><a href="#">11</a></option>
+                                                    
+        </select>
+                                            </div>
+                                            <table class="scoreboard table  table-condensed ">
+
+                                                                    <thead>
+
+                                                                        <tr>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-3"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-5"></td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+                                                                        <tr>
+                                                                            <td>03-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Man City</a></td>
+                                                                            <td><img src="fc/mancity_30x30.gif" style="width:30px; height:30px;" /> </td>
+                                                                            <td><a href="KetQuaTranDau.html"><strong>3-1</strong></a></td>
+                                                                            <td><img src="fc/fc-barcelona.png" style="width:30px; height:30px;" /></td>
+                                                                            <td align="left"><a class="loseteam" href="DoiBong.html">Barcelona</a></td>
+
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td>03-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Atletico Marid</a></td>
+                                                                            <td><img src="fc/atletico.png" style="width:30px; height:30px;"/></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>3-1</strong></a></td>
+                                                                            <td><img src="fc/rostov.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="loseteam" href="DoiBong.html">Rostov</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>03-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Besiktas</a></td>
+                                                                            <td><img src="fc/Besiktas.png" style="width:30px; height:30px;" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>1-1</strong></a></td>
+                                                                            <td><img src="fc/Napoli.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="loseteam" href="DoiBong.html">Napoli</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>03-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">PSV</a></td>
+                                                                            <td><img src="fc/PSV.png" style="width:30px; height:30px" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>1-2</strong></a></td>
+
+                                                                            <td><img src="fc/Bayern.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="winteam" href="DoiBong.html">Bayern Munich</a></td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+
+                                                                </table>
+                                        </div>
+                                        <div id="LLG" class="tab-pane fade">
+                                            <div class="form-group form-inline">
+                                                <img src="img/laliga.png" style="width:60px; height:60px;" />
+
+                                                <label class="input-sm" style="margin-top:4px;">Vòng:</label>
+                                                <select style="margin-top:4px;" class="cboKQVong form-control input-sm">
+                                                    <option value="1"><a href="#">1</a></option>
+                                                    <option value="2"><a href="#">2</a></option>
+                                                    <option value="3"><a href="#">3</a></option>
+                                                    <option value="4"><a href="#">4</a></option>
+                                                    <option value="5"><a href="#">5</a></option>
+                                                    <option value="6"><a href="#">6</a></option>
+                                                    <option value="7"><a href="#">7</a></option>
+                                                    <option value="8"><a href="#">8</a></option>
+                                                    <option value="9"><a href="#">9</a></option>
+                                                    <option value="10"><a href="#">10</a></option>
+                                                    <option value="11"><a href="#">11</a></option>
+                                                    
+        </select>
+                                            </div>
+                                            <table class="scoreboard table  table-condensed ">
+
+                                                                    <thead>
+
+                                                                        <tr>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-3"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-5"></td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+                                                                        <tr>
+                                                                            <td>19-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Atletico Marid</a></td>
+                                                                            <td><img src="fc/atletico.png" style="width:30px; height:30px;" /> </td>
+                                                                            <td><a href="KetQuaTranDau.html"><strong>0-3</strong></a></td>
+                                                                            <td><img src="fc/real-madrid-hd-logo.png" style="width:30px; height:30px;" /></td>
+                                                                            <td align="left"><a class="winteam" href="DoiBong.html">Real Marid</a></td>
+
+                                                                        </tr>
+
+                                                                        <tr>
+                                                                            <td>19-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Barcelona</a></td>
+                                                                            <td><img src="fc/fc-barcelona.png" style="width:30px; height:30px;" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>0-0</strong></a></td>
+                                                                            <td><img src="fc/malaga.gif" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class=" loseteam" href="DoiBong.html">Malaga</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>20-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Deportivo</a></td>
+                                                                            <td><img src="fc/deportivo.gif" style="width:30px; height:30px;" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>2-3</strong></a></td>
+                                                                            <td><img src="fc/sevilla.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="winteam" href="DoiBong.html">Sevilla</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>20-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Eibar</a></td>
+                                                                            <td><img src="fc/eibar.png" style="width:30px; height:30px" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>1-0</strong></a></td>
+
+                                                                            <td><img src="fc/celta.gif" style="width:30px; height:30px" /></td>
+                                                                            <td><a class="loseteam" href="DoiBong.html">Celta Vigo</a></td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+
+                                                                </table>
+                                        </div>
+                                        <div id="BDL" class="tab-pane fade">
+                                            <div class="form-group form-inline">
+                                                <img src="img/bundesliga.png" style="width:60px; height:60px;" />
+
+                                                <label class="input-sm" style="margin-top:4px;">Vòng:</label>
+                                                <select style="margin-top:4px;" class="cboKQVong form-control input-sm">
+                                                    <option value="1"><a href="#">1</a></option>
+                                                    <option value="2"><a href="#">2</a></option>
+                                                    <option value="3"><a href="#">3</a></option>
+                                                    <option value="4"><a href="#">4</a></option>
+                                                    <option value="5"><a href="#">5</a></option>
+                                                    <option value="6"><a href="#">6</a></option>
+                                                    <option value="7"><a href="#">7</a></option>
+                                                    <option value="8"><a href="#">8</a></option>
+                                                    <option value="9"><a href="#">9</a></option>
+                                                    <option value="10"><a href="#">10</a></option>
+                                                    <option value="11"><a href="#">11</a></option>
+                                                    
+        </select>
+                                            </div>
+                                            <table class="scoreboard table  table-condensed ">
+
+                                                                    <thead>
+
+                                                                        <tr>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-3"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-5"></td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+                                                                        <tr>
+                                                                            <td>19-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Dortmund</a></td>
+                                                                            <td><img src="fc/Dortmund.png" style="width:30px; height:30px;" /> </td>
+                                                                            <td><a href="KetQuaTranDau.html"><strong>1-0</strong></a></td>
+                                                                            <td><img src="fc/Bayern.png" style="width:30px; height:30px;" /></td>
+                                                                            <td align="left"><a class="loseteam" href="DoiBong.html">Bayern Munich</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>19-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Wolfsburg</a></td>
+                                                                            <td><img src="fc/Wolfsburg.png" style="width:30px; height:30px;" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>0-1</strong></a></td>
+                                                                            <td><img src="fc/Shalker.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class=" winteam" href="DoiBong.html">Schalke 04</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>20-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Schalke 04</a></td>
+                                                                            <td><img src="fc/Shalker.png" style="width:30px; height:30px;" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>3-1</strong></a></td>
+                                                                            <td><img src="fc/Werber.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="loseteam" href="DoiBong.html">Werber Bremen</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>20-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Mainz</a></td>
+                                                                            <td><img src="fc/Mainz.png" style="width:30px; height:30px" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>4-2</strong></a></td>
+
+                                                                            <td><img src="fc/Freiburg.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="loseteam" href="DoiBong.html">Freiburg</a></td>
+                                                                        </tr>
+                                                                       
+                                                                    </tbody>
+
+                                                                </table>
+                                        </div>
+                                        <div id="SRA" class="tab-pane fade">
+                                            <div class="form-group form-inline">
+                                                <img src="img/serieA.png" style="width:60px; height:60px;" />
+
+                                                <label class="input-sm" style="margin-top:4px;">Vòng:</label>
+                                                <select style="margin-top:4px;" class="cboKQVong form-control input-sm">
+                                                    <option value="1"><a href="#">1</a></option>
+                                                    <option value="2"><a href="#">2</a></option>
+                                                    <option value="3"><a href="#">3</a></option>
+                                                    <option value="4"><a href="#">4</a></option>
+                                                    <option value="5"><a href="#">5</a></option>
+                                                    <option value="6"><a href="#">6</a></option>
+                                                    <option value="7"><a href="#">7</a></option>
+                                                    <option value="8"><a href="#">8</a></option>
+                                                    <option value="9"><a href="#">9</a></option>
+                                                    <option value="10"><a href="#">10</a></option>
+                                                    <option value="11"><a href="#">11</a></option>
+                                                    
+        </select>
+                                            </div>
+                                            <table class="scoreboard table  table-condensed ">
+
+                                                                    <thead>
+
+                                                                        <tr>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-3"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-1"></td>
+                                                                            <td class="col-sm-5"></td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+
+                                                                        <tr>
+                                                                            <td>06-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="winteam" href="DoiBong.html">Torino</a></td>
+                                                                            <td><img src="fc./Torino.png" style="width:30px; height:30px;" /> </td>
+                                                                            <td><a href="KetQuaTranDau.html"><strong>5-1</strong></a></td>
+                                                                            <td><img src="fc/Cagliari.png" style="width:30px; height:30px;" /></td>
+                                                                            <td align="left"><a class="loseteam" href="DoiBong.html">Cagliari</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>07-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Napoli</a></td>
+                                                                            <td><img src="fc/Napoli.png" style="width:30px; height:30px;" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>1-1</strong></a></td>
+                                                                            <td><img src="fc/Lazio.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class=" loseteam" href="DoiBong.html">Lazio</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>07-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="loseteam" href="DoiBong.html">Pescara</a></td>
+                                                                            <td><img src="fc/Pescara.png" style="width:30px; height:30px;" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>0-4</strong></a></td>
+                                                                            <td><img src="fc/Empoli.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="winteam" href="DoiBong.html">Empoli</a></td>
+
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>07-11</td>
+                                                                            <td align="right" style="padding-right:20px;"><a class="losteam" href="DoiBong.html">Cheivo</a></td>
+                                                                            <td><img src="fc/Cheivo.png" style="width:30px; height:30px" /></td>
+
+                                                                            <td><a href="KetQuaTranDau.html"><strong>1-2</strong></a></td>
+
+                                                                            <td><img src="fc/Juve.png" style="width:30px; height:30px;" /></td>
+                                                                            <td><a class="winteam" href="DoiBong.html">Juventus</a></td>
+                                                                        </tr>
+                                                                        
+                                                                    </tbody>
+
+                                                                </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                             
                         </div>
-                       
-                            
-                        
-                        <div class="row teamcaption" style="background-color:grey;">
-                            <div class="col-xs-1 nopadding"><img src="images/176.png" style="margin-left:5px; margin-top:17px;" /></div>
-                            <div class="col-xs-11 nopadding">LA LIGA</div>
-                            </div>
-                        <div class="row">
-                                <p><strong>Ngày:22-10-2016</strong></p>
-                                <table class="table table-hover">
-                                    <thead></thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="DoiBong.html">Osasuna</a></td>
-                                            <td><a href="DoiBong.html"><img src="images/2022_t.png"/></a></td>
-                                            <td><a href="KetQuaTranDau.html">1 - 2</a></td>
-                                            <td><a href="DoiBong.html"><img src="images/2025_t.png"/></a></td>
-                                            <td><a href="DoiBong.html">Real Betis</a></td>
-                                        </tr>
-                                       
-                                    </tbody>
-                                </table>
-                                </div>
-
-                    <hr style="height:1px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                        <div class="row teamcaption" style="background-color:grey;">
-                            <div class="col-xs-1 nopadding"><img src="images/80.png" style="margin-left:5px; margin-top:17px;" /></div>
-                            <div class="col-xs-11 nopadding">BUNDESLIGA</div>
-                            </div>
-                        <div class="row">
-                                <p><strong>Ngày:22-10-2016</strong></p>
-                                <table class="table table-hover">
-                                    <thead></thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="DoiBong.html">Hamburg</a></td>
-                                            <td><a href="DoiBong.html"><img src="images/967_t.png"/></a></td>
-                                            <td><a href="KetQuaTranDau.html">0 - 3</a></td>
-                                            <td><a href="DoiBong.html"><img src="images/979_t.png"/></a></td>
-                                            <td><a href="DoiBong.html">Frankfrut</a></td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                                </div>
-            
-                                <hr style="height:1px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                        <div class="row teamcaption" style="background-color:grey;">
-                            <div class="col-xs-1 nopadding"><img src="images/76.png" style="margin-left:5px; margin-top:17px;" /></div>
-                            <div class="col-xs-11 nopadding">PHÁP- VĐQG PHÁP</div>
-                            </div>
-                        <div class="row">
-                                <p><strong>Ngày:22-10-2016</strong></p>
-                                <table class="table table-hover">
-                                    <thead></thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="DoiBong.html">Monaco</a></td>
-                                            <td><a href="DoiBong.html"><img src="images/885_t.png"/></a></td>
-                                            <td><a href="KetQuaTranDau.html">6 - 2</a></td>
-                                            <td><a href="DoiBong.html"><img src="images/906_t.png"/></a></td>
-                                            <td><a href="DoiBong.html">Montpellier</a></td>
-                                        </tr>
-                 
-
-                                    </tbody>
-                                </table>
-                                </div>
-                  
                     </div>
-
-
                 </div>
-
 
                 <div class="col-md-3 sidenav nopadding">
 
@@ -566,21 +1154,31 @@
 
 
 
-                       
-<div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">GIẢI BÓNG HÀNG ĐẦU</p></a>
+
+                        <div class="caption text-left" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;">GIẢI BÓNG HÀNG ĐẦU</p></a>
 
 
                         </div>
                         <ul class="list-group text-left">
-                            <li class="list-group-item"><a href="#"><img src="images/68.png"/> NGOẠI HẠNG ANH</a></li>
-                            <li class="list-group-item"><a href="#"><img src="images/7.png"/> CHAMPIONS LEAGUE</a> </li>
-                            <li class="list-group-item"><a href="#"><img src="images/176.png"/> LA LIGA</a> </li>
-                            <li class="list-group-item"><a href="#"><img src="images/80.png"/> BUNDESLIGA</a></li>
-                            <li class="list-group-item"><a href="#"><img src="images/100.png"/> SERIE A</a></li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/68.png" /> NGOẠI HẠNG ANH</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/7.png" /> CHAMPIONS LEAGUE</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/176.png" /> LA LIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/80.png" /> BUNDESLIGA</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="DanhSachBaiViet.html"><img src="images/100.png" /> SERIE A</a>
+                            </li>
                         </ul>
 
-<hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000;"></hr>
-                        <div class="container-fluid">
+                        <hr style="height:2px;border:none;color:#cc0000;;background-color:#cc0000; margin-top:44px;"></hr>
+                        <div class="container-fluid" style="margin-left:-15px; width:360px;">
 
                             <div class="caption" style="height:40px;"><a class="tableheader" href="#" style="color:white; font-size:16px;"><span class="glyphicon glyphicon-sunglasses"></span> ĐỌC NHIỀU</p></a>
 
@@ -635,62 +1233,62 @@
             </div>
 
         </footer>
-    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header" align="center">
-                    <img class="img-circle" id="img_logo" src="img/Football.ico">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" align="center">
+                        <img class="img-circle" id="img_logo" src="img/Football.ico">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 					</button>
-                </div>
+                    </div>
 
-                <!-- Begin # DIV Form -->
-                <div id="div-forms">
+                    <!-- Begin # DIV Form -->
+                    <div id="div-forms">
 
-                    <!-- Begin # Login Form -->
-                    <form id="login-form">
-                        <div class="modal-body">
-                            <div id="div-login-msg">
-                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-login-msg">Nhập thông tin tài khoản</span>
-                            </div>
-                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
-                            <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
-                            <div class="checkbox">
-                                <label>
+                        <!-- Begin # Login Form -->
+                        <form id="login-form">
+                            <div class="modal-body">
+                                <div id="div-login-msg">
+                                    <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                    <span id="text-login-msg">Nhập thông tin tài khoản</span>
+                                </div>
+                                <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                                <input id="login_password" class="form-control" type="password" placeholder="Mật khẩu" required>
+                                <div class="checkbox">
+                                    <label>
                                     <input type="checkbox"> Nhớ mật khẩu
                                 </label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div>
-                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                            <div class="modal-footer">
+                                <div>
+                                    <button type="submit" class="btn btn-success btn-lg btn-block">Đăng nhập</button>
+                                </div>
+                                <div>
+                                    <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
+                                    <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
+                                </div>
                             </div>
-                            <div>
-                                <button id="login_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
-                                <button id="login_register_btn" type="button" class="btn btn-link">Đăng ký</button>
-                            </div>
-                        </div>
-                    </form>
-                    <!-- End # Login Form -->
+                        </form>
+                        <!-- End # Login Form -->
 
-                    <!-- Begin | Lost Password Form -->
-                    <form id="lost-form" style="display:none;">
+                        <!-- Begin | Lost Password Form -->
+                        <form id="lost-form" style="display:none;">
                         <div class="modal-body">
                             <div id="div-lost-msg">
                                 <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-lost-msg">Type your e-mail.</span>
+                                <span id="text-lost-msg">Nhập Email</span>
                             </div>
-                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                            <input id="lost_email" class="form-control" type="text" placeholder="Nhập Email" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Gửi</button>
                             </div>
                             <div>
-                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Đăng ký</button>
                             </div>
                         </div>
                     </form>
@@ -701,40 +1299,191 @@
                         <div class="modal-body">
                             <div id="div-register-msg">
                                 <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
-                                <span id="text-register-msg">Register an account.</span>
+                                <span id="text-register-msg">Tạo tài khoản</span>
                             </div>
-                            <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
-                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
-                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                            <input id="register_username" class="form-control" type="text" placeholder="Nhập Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="Nhập Email" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Mật khẩu" required>
                         </div>
                         <div class="modal-footer">
                             <div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Đăng ký</button>
                             </div>
                             <div>
-                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
-                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Đăng nhập</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Quên mật khẩu?</button>
                             </div>
                         </div>
                     </form>
-                    <!-- End | Register Form -->
+                        <!-- End | Register Form -->
+
+                    </div>
+                    <!-- End # DIV Form -->
 
                 </div>
-                <!-- End # DIV Form -->
-
             </div>
         </div>
-    </div>
 </html>
+<script src="./js/jquery.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
 <script>
+     $(document).ready(function() {
+       $('.cboKQVong').val('11').prop('selected', true);
+        $('.cboLichThiDau').val('12').prop('selected', true);
+    });
      $(function () {
                 $('#datetimepicker1').datetimepicker();
             });
     function btnCloseClick() {
         $("#myModal").html("");
     }
+   
 
 </script>
 
 <script src="./js/jquery.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+    $(function() {
+    
+    var $formLogin = $('#login-form');
+    var $formLost = $('#lost-form');
+    var $formRegister = $('#register-form');
+    var $divForms = $('#div-forms');
+    var $modalAnimateTime = 300;
+    var $msgAnimateTime = 150;
+    var $msgShowTime = 2000;
+
+    $("form").submit(function () {
+        switch(this.id) {
+            case "login-form":
+                var $lg_username=$('#login_username').val();
+                var $lg_password=$('#login_password').val();
+                if ($lg_username == "ERROR") {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
+                } else {
+                    msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+                }
+                return false;
+                break;
+            case "lost-form":
+                var $ls_email=$('#lost_email').val();
+                if ($ls_email == "ERROR") {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
+                } else {
+                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
+                }
+                return false;
+                break;
+            case "register-form":
+                var $rg_username=$('#register_username').val();
+                var $rg_email=$('#register_email').val();
+                var $rg_password=$('#register_password').val();
+                if ($rg_username == "ERROR") {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
+                } else {
+                    msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
+                }
+                return false;
+                break;
+            default:
+                return false;
+        }
+        return false;
+    });
+    
+    $('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
+    $('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
+    $('#login_lost_btn').click( function () { modalAnimate($formLogin, $formLost); });
+    $('#lost_login_btn').click( function () { modalAnimate($formLost, $formLogin); });
+    $('#lost_register_btn').click( function () { modalAnimate($formLost, $formRegister); });
+    $('#register_lost_btn').click( function () { modalAnimate($formRegister, $formLost); });
+    
+    function modalAnimate ($oldForm, $newForm) {
+        var $oldH = $oldForm.height();
+        var $newH = $newForm.height();
+        $divForms.css("height",$oldH);
+        $oldForm.fadeToggle($modalAnimateTime, function(){
+            $divForms.animate({height: $newH}, $modalAnimateTime, function(){
+                $newForm.fadeToggle($modalAnimateTime);
+            });
+        });
+    }
+    
+    function msgFade ($msgId, $msgText) {
+        $msgId.fadeOut($msgAnimateTime, function() {
+            $(this).text($msgText).fadeIn($msgAnimateTime);
+        });
+    }
+    
+    function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+        var $msgOld = $divTag.text();
+        msgFade($textTag, $msgText);
+        $divTag.addClass($divClass);
+        $iconTag.removeClass("glyphicon-chevron-right");
+        $iconTag.addClass($iconClass + " " + $divClass);
+        setTimeout(function() {
+            msgFade($textTag, $msgOld);
+            $divTag.removeClass($divClass);
+            $iconTag.addClass("glyphicon-chevron-right");
+            $iconTag.removeClass($iconClass + " " + $divClass);
+  		}, $msgShowTime);
+    }
+});
+    $(document).ready(function() {
+        $('.cboKQVong').val('11').prop('selected', true);
+        $('.cboLichThiDau').val('12').prop('selected', true);
+    });
+
+
+    $.fn.typer = function(text, options) {
+        options = $.extend({}, {
+            char: ' ',
+            delay: 2200,
+            duration: 600,
+            endless: true
+        }, options || text);
+
+        text = $.isPlainObject(text) ? options.text : text;
+
+        var elem = $(this),
+            isTag = false,
+            c = 0;
+
+        (function typetext(i) {
+            var e = ({
+                    string: 1,
+                    number: 1
+                }[typeof text] ? text : text[i]) + options.char,
+                char = e.substr(c++, 1);
+
+            if (char === '<') {
+                isTag = true;
+            }
+            if (char === '>') {
+                isTag = false;
+            }
+            elem.html(e.substr(0, c));
+            if (c <= e.length) {
+                if (isTag) {
+                    typetext(i);
+                } else {
+                    setTimeout(typetext, options.duration / 10, i);
+                }
+            } else {
+                c = 0;
+                i++;
+
+                if (i === text.length && !options.endless) {
+                    return;
+                } else if (i === text.length) {
+                    i = 0;
+                }
+                setTimeout(typetext, options.delay, i);
+            }
+        })(0);
+    };
+
+    $('#type').typer(['<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Đón xem trận đấu cực hot Arsenal gặp Manchester United ngày 19/11</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Liverpool đang tạm thời dẫn đầu giải ngoại hạng Anh</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Sau 11 vòng Arsenal về lại vị trí thứ 4 huyền thoại</b>', '<b style="color:red;"><span class="glyphicon glyphicon-chevron-right" style="color:red;"></span> Real Marid vươn lên đầu bảng với 27 điểm</b>']);
+
+</script>
